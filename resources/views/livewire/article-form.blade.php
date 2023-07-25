@@ -8,7 +8,7 @@
                     </div>
                     <div class="mb-3">
                       <label class="form-label">Descrizione</label>
-                      <textarea cols="30" rows="10" wire:model.lazy="body"></textarea>
+                      <textarea cols="30" rows="10" class="form-control" wire:model.lazy="body"></textarea>
                       @error('body') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                     </div>
                     <div class="mb-3">
