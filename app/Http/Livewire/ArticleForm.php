@@ -12,7 +12,7 @@ class ArticleForm extends Component
     public $body;
     public $price;
 
-    public function saveArticle(){
+    public function save(){
         Article::create([
             'title' => $this->title,
             'body' => $this->body,
@@ -25,4 +25,13 @@ class ArticleForm extends Component
     {
         return view('livewire.article-form');
     }
+    protected $rules = [
+        'title' => 'required|min:6',
+        'body' =>'required | min:20',
+        'price' => 'required '
+       ];
+    public function updated($propertyName)
+       {
+           $this->validateOnly($propertyName);
+       }
 }
