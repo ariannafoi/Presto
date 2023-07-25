@@ -18,6 +18,7 @@ class ArticleForm extends Component
             'body' => $this->body,
             'price' => $this->price,
         ]);
+        return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
         $this->reset();
     }
 
@@ -29,7 +30,8 @@ class ArticleForm extends Component
         'title' => 'required|min:6',
         'body' =>'required | min:20',
         'price' => 'required '
-       ];
+    ];
+
     public function updated($propertyName)
        {
            $this->validateOnly($propertyName);
