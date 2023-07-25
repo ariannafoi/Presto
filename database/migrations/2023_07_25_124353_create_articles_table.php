@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->text('title');
+            $table->text('body');
+            $table->decimal('price', 6,2);
             $table->timestamps();
         });
     }
