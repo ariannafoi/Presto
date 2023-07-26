@@ -1,18 +1,19 @@
-<div class="card" style="width: 18rem;">
+<div class="card-custom" style="width: 18rem;">
     <img src="https://picsum.photos/200" class="card-img-top" alt="Immagine descrittiva">
-    <div class="card-body">
-      <h5 class="card-title">{{$article->title}}</h5>
-      <p class="card-text">
-        {{$article->body}}
+    <div class="card-details">
+      <h5 class="text-title">{{$article->getTitleSubstring()}}</h5>
+      <p class="text-body">
+        {{$article->getDescriptionSubstring()}}
       </p>
       <p class="card-text">
         {{$article->price}} €
       </p>
-      <a href="{{route('article.show' , compact('article'))}}" class="btn btn-primary shadow">Visualizza</a>
-      <a href="#" class="btn btn-primary">Categoria: {{$article->category->name}}</a>
+      <p class="card-text">
+        <a href="{{route('categoryShow', ['category' => $article->category])}}" class="">Categoria: {{$article->category->name}}</a>
+      </p>
+      <a href="{{route('article.show' , compact('article'))}}" class="card-button">Visualizza</a>     
       <p class="card-footer">
         Pubblicato il {{$article->created_at->format('d/m/Y')}} - Autore: {{$article->user->name}}
-      </p>
-      
+      </p>     
     </div>
   </div>
