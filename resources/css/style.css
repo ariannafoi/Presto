@@ -1,0 +1,28 @@
+nav{
+    background-color: #3777ff;
+    
+}
+
+.n-custom{
+    color: white;
+    
+}
+.n-custom:hover{
+    scale: 1.05;
+    border-bottom: 2px solid white;
+}
+.font-titolo{
+    font-family: 'Oswald', sans-serif;
+}
+.font-scritte{
+    font-family: 'PT Sans', sans-serif; 
+}
+
+footer{
+    background-color: #3777ff;
+    color: black;
+    margin-top: 50vh;
+}
+a{
+    text-decoration: none;
+}

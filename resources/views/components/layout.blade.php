@@ -7,6 +7,9 @@
     <title>Document</title>
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <x-navbar></x-navbar>
@@ -20,5 +23,6 @@
 
     <x-footer></x-footer>
     @livewireScripts
+    <script src="https://kit.fontawesome.com/9240e71097.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="display-1">Accedi</h1>
+                <h1 class="display-1 font-titolo">Accedi</h1>
             </div>
         </div>
     </div>
@@ -15,14 +15,14 @@
                 <form method="post" action="{{route('login')}}">
                     @csrf
                     <div class="mb-3">
-                      <label class="form-label">Email address</label>
-                      <input type="email" class="form-control" name="email">
+                      <label class="form-label font-scritte" >Email address</label>
+                      <input type="email" class="form-control" name="email" placeholder="Inserisci il tuo indirizzo e-mail">
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">Password</label>
-                      <input type="password" class="form-control" name="password">
+                      <label class="form-label font-scritte">Password</label>
+                      <input type="password" class="form-control" name="password" placeholder="Inserisci la tua password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Accedi</button>
+                    <button type="submit" class="btn btn-primary font-scritte">Accedi</button>
                     <a href="{{route('login')}}">Non sei ancora registrato? Registrati</a>
                 </form>
             </div>

@@ -1,5 +1,5 @@
 <div>
-                <form wire:submit.prevent="save">
+                <form wire:submit.prevent="save" >
                     @csrf
                     <div class="mb-3">
                       <label class="form-label">Titolo</label>
