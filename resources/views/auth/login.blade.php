@@ -23,7 +23,7 @@
                       <input type="password" class="form-control" name="password" placeholder="Inserisci la tua password">
                     </div>
                     <button type="submit" class="btn btn-primary font-scritte">Accedi</button>
-                    <a href="{{route('login')}}">Non sei ancora registrato? Registrati</a>
+                    <a href="{{route('register')}}">Non sei ancora registrato? Registrati</a>
                 </form>
             </div>
         </div>

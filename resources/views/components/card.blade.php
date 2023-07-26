@@ -9,9 +9,9 @@
         {{$article->price}} €
       </p>
       <p class="card-text">
-        <a href="{{route('categoryShow', ['category' => $article->category])}}" class="">Categoria: {{$article->category->name}}</a>
+        Categoria: <a href="{{route('categoryShow', ['category' => $article->category])}}" class="">{{$article->category->name}}</a>
       </p>
-      <a href="{{route('article.show' , compact('article'))}}" class="card-button">Visualizza</a>     
+      <a href="{{route('article.show' , compact('article'))}}" class="card-button">Scopri di più</a>     
       <p class="card-footer">
         Pubblicato il {{$article->created_at->format('d/m/Y')}} - Autore: {{$article->user->name}}
       </p>     

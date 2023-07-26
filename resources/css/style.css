@@ -1,5 +1,16 @@
 .nav-custom{
-    background-color: #3777ff;
+    background-color: rgba(55, 119, 255, 0.8);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    height: 80px;
+    
+}
+.space-custom{
+
+    padding-top: 100px ;
+
 }
 
 .n-custom{
@@ -10,15 +21,26 @@
     scale: 1.05;
     border-bottom: 2px solid white;
 }
-.font-titolo{
+.title-custom{
     font-family: 'Oswald', sans-serif;
+    font-size: 150px;
+    background: linear-gradient(
+        to right, rgba(55, 119, 255, 0.8) , rgb(23, 10, 87));
+         -webkit-text-fill-color: transparent;
+         -webkit-background-clip: text;
 }
 .font-scritte{
     font-family: 'PT Sans', sans-serif; 
 }
+.subtitle-custom{
+
+    font-size: 30px;
+    
+
+}
 
 footer{
-    background-color: #3777ff;
+    background-color: rgba(55, 119, 255, 0.8);
     color: black;
     margin-top: 50vh;
 }
