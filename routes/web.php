@@ -17,3 +17,4 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [PublicController::class, 'home'])->name('welcome');
 Route::get('/crea', [ArticleController::class, 'create'])->middleware('auth')->name('create');
+Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');

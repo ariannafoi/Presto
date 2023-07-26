@@ -9,6 +9,17 @@
           <li class="nav-item">
             <a class="nav-link n-custom" aria-current="page" href="{{route('welcome')}}">Home <i class="fa-solid fa-house"></i></a>
           </li>
+          <li class="nav-item dropdown">
+            <a id="categoriesDropdown" class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              @foreach ($categories as $category)
+                <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                <li><hr class="dropdown-divider"></li>
+              @endforeach
+            </ul>
+          </li>
           @guest
           <li class="nav-item d-flex justify-items-center">
             <a class="nav-link n-custom" href="{{route('login')}}">Accedi <i class="fa-solid fa-fingerprint"></i></a>

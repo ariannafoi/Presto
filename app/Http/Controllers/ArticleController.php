@@ -33,7 +33,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $article = Auth::user()->articles()->create(
         [
             'name'=>$request->input('name'),
