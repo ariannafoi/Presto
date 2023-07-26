@@ -6,7 +6,7 @@
         {{$article->body}}
       </p>
       <p class="card-text">
-        {{$article->price}} $
+        {{$article->price}} 
       </p>
       <a href="" class="btn btn-primary shadow">Visualizza</a>
       <a href="#" class="btn btn-primary">Categoria: {{$article->category->name}}</a>
@@ -16,3 +16,4 @@
       
     </div>
   </div>
+  
