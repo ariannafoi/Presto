@@ -20,4 +20,22 @@ class Article extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
+
+    public function getDescriptionSubstring(){
+        if(strlen($this->body) > 20){
+            return substr($this->body, 0, 20). '...';
+        }
+        else{
+            return $this->body;
+        }
+    }
+
+    public function getTitleSubstring(){
+        if(strlen($this->title) > 15){
+            return substr($this->title, 0, 15). '...';
+        }
+        else{
+            return $this->title;
+        }
+    }
 }
