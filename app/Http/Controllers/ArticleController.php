@@ -32,16 +32,15 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-      //dd($request->all());
-    $product = Auth::user()->products()->create(
-    [
-    'name'=>$request->input('name'),
-    'body'=>$request->input('body'),
-    'price'=>$request->input('price'),
-    'img'=> $request->has('img') ? $request->file('img')->store('public/products') : '/img/default.jpg',
-    'category_id' =>$request->input('category_id'),
-    ]
-    )};  
+        //dd($request->all());
+        // $product = Auth::user()->products()->create(
+        // [
+        //     'name'=>$request->input('name'),
+        //     'body'=>$request->input('body'),
+        //     'price'=>$request->input('price'),
+        //     'category_id' =>$request->input('category_id'),
+        // ]
+        // )};  
     }
 
     /**

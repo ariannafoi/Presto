@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Models\Category;
 
 class ArticleForm extends Component
 {
@@ -14,11 +15,12 @@ class ArticleForm extends Component
     public $category;
 
     public function save(){
+        $category = Category::find($this->category);
+
         Article::create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
-            'category '=> $this->category,
             
         ]);
         return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
