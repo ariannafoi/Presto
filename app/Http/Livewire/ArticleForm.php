@@ -11,12 +11,15 @@ class ArticleForm extends Component
     public $title;
     public $body;
     public $price;
+    public $category;
 
     public function save(){
         Article::create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
+            'category '=> $this->category,
+            
         ]);
         return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
         $this->reset();
@@ -29,8 +32,18 @@ class ArticleForm extends Component
     protected $rules = [
         'title' => 'required|min:6',
         'body' =>'required | min:20',
-        'price' => 'required '
+        'price' => 'required ',
+        'category' =>'required'
     ];
+    protected $messages = [
+        'title.required' => 'Il titolo è obbligatorio',
+        'title.min' => 'Il titolo deve avere almeno 6 caratteri',
+        'body.required' => 'Il corpo è obbligatorio',
+        'body.min' => 'Il corpo deve avere almeno 20 caratteri',
+        'price.required' => 'Il prezzo è obbligatorio',
+        'category.required' => 'La categoria è obbligatoria',
+    ];
+            
 
     public function updated($propertyName)
        {

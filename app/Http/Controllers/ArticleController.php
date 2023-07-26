@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -18,17 +19,29 @@ class ArticleController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Category $category)
     {
         return view('article/create');
     }
+    public function productsByCategory(Category $category){
+        return view('product.category', compact('category'));
+        }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+      //dd($request->all());
+    $product = Auth::user()->products()->create(
+    [
+    'name'=>$request->input('name'),
+    'body'=>$request->input('body'),
+    'price'=>$request->input('price'),
+    'img'=> $request->has('img') ? $request->file('img')->store('public/products') : '/img/default.jpg',
+    'category_id' =>$request->input('category_id'),
+    ]
+    )};  
     }
 
     /**
@@ -62,4 +75,5 @@ class ArticleController extends Controller
     {
         //
     }
+    
 }

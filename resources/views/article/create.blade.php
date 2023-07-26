@@ -10,7 +10,9 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                <livewire:article-form />
+                <livewire:article-form
+                category="$category"
+                />
             </div>
         </div>
     </div>

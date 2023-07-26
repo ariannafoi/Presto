@@ -16,6 +16,17 @@
                         <input type="number" class="form-control" wire:model.lazy="price">
                         @error('price') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                       </div>
+                      <div class="mb-3">
+                        <label class="form-label">Categoria</label>
+                        <select wire:model.defer='category' class="form-control" id="">
+                          <option value="">Scegli la categoria</option>
+                          @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                          @endforeach
+                        </select>
+                        @error('category') <div class="error alert alert-danger">{{ $message }}</div> @enderror
+
+                      </div>
                     <button type="submit" class="btn btn-primary">Crea Annuncio</button>
                 </form>
 </div>
