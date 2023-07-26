@@ -11,7 +11,7 @@ class PublicController extends Controller
 {
     public function home() {
 
-        $articles = Article::take(6)->get()->sortDesc();
+        $articles = Article::take(6)->get()->orderBy('created_at' , 'desc');
         // dd($articles);
         return view('welcome', compact('articles'));
     }
