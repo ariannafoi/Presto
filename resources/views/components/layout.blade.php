@@ -19,7 +19,9 @@
         </div>
     @endif
 
-    {{$slot}}
+    <div class="min-vh-100">
+        {{$slot}}
+    </div>
 
     <x-footer></x-footer>
     @livewireScripts

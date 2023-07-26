@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleForm extends Component
 {
@@ -13,16 +14,17 @@ class ArticleForm extends Component
     public $body;
     public $price;
     public $category;
+    public $user_id;
+    public $article;
 
     public function save(){
-        $category = Category::find($this->category);
-
-        Article::create([
+        $this->article = Category::find($this->category)->articles()->create([
             'title' => $this->title,
             'body' => $this->body,
             'price' => $this->price,
-            
+            'user_id'=>Auth::user()->id,
         ]);
+        $this->article->user()->associate(Auth::user());
         return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
         $this->reset();
     }

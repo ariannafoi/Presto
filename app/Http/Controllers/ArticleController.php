@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -32,15 +33,14 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        // $product = Auth::user()->products()->create(
-        // [
-        //     'name'=>$request->input('name'),
-        //     'body'=>$request->input('body'),
-        //     'price'=>$request->input('price'),
-        //     'category_id' =>$request->input('category_id'),
-        // ]
-        // )};  
+        dd($request->all());
+        $article = Auth::user()->articles()->create(
+        [
+            'name'=>$request->input('name'),
+            'body'=>$request->input('body'),
+            'price'=>$request->input('price'),
+        ]);
+
     }
 
     /**
