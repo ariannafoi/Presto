@@ -6,9 +6,9 @@
         {{$article->body}}
       </p>
       <p class="card-text">
-        {{$article->price}} $
+        {{$article->price}} €
       </p>
-      <a href="" class="btn btn-primary shadow">Visualizza</a>
+      <a href="{{route('article.show' , compact('article'))}}" class="btn btn-primary shadow">Visualizza</a>
       <a href="#" class="btn btn-primary">Categoria: {{$article->category->name}}</a>
       <p class="card-footer">
         Pubblicato il {{$article->created_at->format('d/m/Y')}} - Autore: {{$article->user->name}}

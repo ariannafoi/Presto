@@ -20,6 +20,9 @@
               @endforeach
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link n-custom" aria-current="page" href="{{route('article.index')}}">Annunci</a>
+          </li>
           @guest
           <li class="nav-item d-flex justify-items-center">
             <a class="nav-link n-custom" href="{{route('login')}}">Accedi <i class="fa-solid fa-fingerprint"></i></a>
