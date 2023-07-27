@@ -38,4 +38,12 @@ class Article extends Model
             return $this->title;
         }
     }
+    public function setAccepted($value){
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
+    public static function toBeRevisonedCount(){
+        return Article::where('is_accepted',null)->count();
+    }
 }

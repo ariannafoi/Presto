@@ -15,9 +15,21 @@
               Benvenuto {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
+               <li>
+                @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                      <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-succes btn-sm position-relative" aria-current="page">
+                        Zona revisore
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Article::toBeRevisonedCount()}}
+                            <span class="visually-hidden">Messaggio non letto</span>
+                        </span>
+                      </a>
+                    </li>
+                @endif  
+              </li>
+              {{-- <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>  --}}
               <li><a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a></li>
                 <form action="{{route('logout')}}" id="logout-form" method="POST" class="d-none">
                   @csrf
@@ -48,6 +60,7 @@
           <li class="nav-item">
             <a class="nav-link n-custom" aria-current="page" href="{{route('article.index')}}">Annunci</a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link n-custom" href="{{route('create')}}">Crea il tuo annuncio</a>
           </li>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,7 @@ Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->
 Route::get('/dettaglio/annuncio/{article}', [ArticleController::class, 'show'])->middleware('auth')->name('article.show');
 
 Route::get('/tutti/annunci', [ArticleController::class, 'index'])->name('article.index');
+
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::patch('/accetta/annuncio/{article}', [RevisorController::class,'acceptArticle'])->name('revisor.accept_article');
+Route::patch('/rifiuta/annuncio/{article}', [RevisorController::class,'rejectArticle'])->name('revisor.reject_article');

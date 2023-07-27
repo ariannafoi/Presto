@@ -21,7 +21,7 @@
                       </div>
                     <div class="mb-3 font-scritte">
                       <label class="form-label ">Indirizzo Email</label>
-                      <input type="email" class="form-control" placeholder="Inserire indirizzio e-mail" name="email">
+                      <input type="email" class="form-control" placeholder="Inserire indirizzo e-mail" name="email">
                       @error('email') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                     </div>
                     <div class="mb-3 font-scritte">

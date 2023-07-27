@@ -112,13 +112,17 @@ a{
    /* INIZIO CAROUSEL */
 
    .carousel-custom{
-    width: 400px;
+    width: 50%;
     height: 400px;
    }
 
    .img-custom{
-    background-image: url(https://picsum.photos/200);
-   }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+}
 
     /* FINE CAROUSEL */
 
