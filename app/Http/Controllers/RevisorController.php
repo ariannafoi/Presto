@@ -40,4 +40,10 @@ class RevisorController extends Controller
 
         return redirect()->route('welcome')->with('message', 'Complimenti, L\'utente è diventato revisore');
     }
+
+    public function searchArticles(Request $request)
+    {
+        $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(8);
+        return view('article.index', compact('articles'));
+    }
 }

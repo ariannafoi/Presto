@@ -6,12 +6,26 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
     protected $fillable = ['title','body','price', 'user_id' , 'category_id'];
     
-    use HasFactory;
+    use HasFactory,Searchable;
+
+    public function toSearchableArray()
+    {
+        $category = $this->category;
+        $array = [
+            'id'=>$this->id,
+            'title'=>$this->title,
+            'body'=>$this->body,
+            'category'=>$category,
+        ];
+        
+        return $array;
+    }
 
     public function user(){
         return $this->belongsTo(User::class);
