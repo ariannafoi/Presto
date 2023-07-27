@@ -11,10 +11,21 @@
       <div class="col-md-6 mt-md-0 mt-3 font-scritte">
 
         <!-- Content -->
-        <h5 class="text-uppercase ">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <div class="container">Footer Content</h5>
+          <div class="row">
+            <div class="col-4">
+              <p>Presto.it</p>
+              <p>
+                Vuoi lavorare con noi?
+              </p>
+              <p>
+                Registrati! Clicca qui
+              </p>
+              {{-- <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a> --}}
+            </div>
+          </div>
 
-      </div>
+        </div>
       <!-- Grid column -->
 
       <hr class="clearfix w-100 d-md-none pb-3">

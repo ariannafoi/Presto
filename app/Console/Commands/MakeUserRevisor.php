@@ -32,7 +32,7 @@ class MakeUserRevisor extends Command
         }
         $user->is_revisor = true;
         $user->save();
-        $this->info('L\'utente {{$user->name}} è stato riconoscito come revisore');
+        $this->info("L'utente {$user->name} è stato riconosciuto come revisore");
 
     }
     public function __construct(){
