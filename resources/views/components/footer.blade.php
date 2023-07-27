@@ -21,7 +21,7 @@
               <p>
                 Registrati! Clicca qui
               </p>
-              {{-- <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a> --}}
+              <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a>
             </div>
           </div>
 
