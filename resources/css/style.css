@@ -1,52 +1,82 @@
+/* INIZIO NAVBAR */
 .nav-custom{
-    background-color: rgba(55, 119, 255, 0.8);
-    position: fixed;
-    z-index: 99;
-    width: 100%;
-    backdrop-filter: blur(8px);
-    height: 80px;
+  background-color: #3586ffd4;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  height: 80px;
     
 }
 .space-custom{
-
-    padding-top: 100px ;
-
+  padding-top: 100px ;
 }
 
 .n-custom{
-    color: white;
-    
+  color: white;  
 }
 .n-custom:hover{
-    scale: 1.05;
-    border-bottom: 2px solid white;
+  scale: 1.05;
+  border-bottom: 2px solid white;
 }
+/* FINE NAVBAR */
+
+
+/* INIZIO HEADER */
 .title-custom{
     font-family: 'Oswald', sans-serif;
-    font-size: 150px;
+    font-size: 200px;
     background: linear-gradient(
         to right, rgba(55, 119, 255, 0.8) , rgb(23, 10, 87));
          -webkit-text-fill-color: transparent;
          -webkit-background-clip: text;
 }
+.subtitle-custom{
+  font-size: 30px;
+}
+
+@media screen and (max-width: 767px){
+  .title-custom{
+    font-size: 70px;
+  }
+
+  .subtitle-custom{
+    font-size: 20px;
+  }
+}
+
 .font-scritte{
     font-family: 'PT Sans', sans-serif; 
 }
-.subtitle-custom{
 
-    font-size: 30px;
-    
+.section-custom{
+  margin: 150px 0px 50px;
+}
+
+@media screen and (max-width: 767px){
+  .section-custom{
+    margin: 80px 0px 0px 0px;
+  }
 
 }
 
-/* footer{
-    background-color: rgba(55, 119, 255, 0.8);
-    color: black;
-    margin-top: 50vh;
-} */
+/* FINE HEADER */
 
-/* FOOTER NUOVO */
+/* ULTIMI ANNUNCI */
+.card-space{
+margin: 300px 0px;
+}
 
+@media screen and (max-width: 767px){
+  .card-space{
+    margin: 30px 0px 0px 0px;
+  }
+
+}
+
+/* FINE ULTIMI ANNUNCI */
+
+/* INIZIO FOOTER*/
 * {
   margin: 0;
   padding: 0;
@@ -59,6 +89,7 @@
   align-items: flex-end;
   min-height: 50vh;
   display: flex;
+  margin-top: 130px;
 }
 .footer {
   position: relative;
@@ -185,7 +216,7 @@ a{
 
 
 
-/* INIZIO Card */
+/* INIZIO CARD */
 
 .card-custom {
     min-width: 190px;
@@ -197,15 +228,15 @@ a{
     border: 2px solid #c3c6ce;
     transition: 0.5s ease-out;
     overflow: visible;
-   }
+}
    
-   .card-details {
+.card-details {
     color: black;
     height:50%;
     place-content: top;
-   }
+}
    
-   .card-button {
+.card-button {
     transform: translate(-50%, 125%);
     width: 60%;
     border-radius: 1rem;
@@ -219,45 +250,45 @@ a{
     bottom: 0;
     opacity: 0;
     transition: 0.3s ease-out;
-   }
+}
    
-   .text-body {
+.text-body {
     color: rgb(134, 134, 134);
-   }
+}
    
-   /*Text card*/
-   .text-title {
+/*Text card*/
+.text-title {
     font-size: 1.5em;
     font-weight: bold;
-   }
+}
    
-   /*Hover card*/
-   .card-custom:hover {
+/*Hover card*/
+.card-custom:hover {
     border-color: #008bf8;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
+}
    
-   .card-custom:hover .card-button {
+.card-custom:hover .card-button {
     transform: translate(-50%, 50%);
     opacity: 1;
-   }
+}
 
-   /* FINE Card */
+/* FINE CARD */
 
-   /* INIZIO CAROUSEL */
 
-   .carousel-custom{
+/* INIZIO CAROUSEL */
+
+.carousel-custom{
     width: 50%;
     height: 400px;
-   }
+}
 
-   .img-custom{
+.img-custom{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    
+    width: 100%;  
 }
 
-    /* FINE CAROUSEL */
+/* FINE CAROUSEL */
 

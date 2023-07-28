@@ -18,19 +18,19 @@ class RevisorController extends Controller
     }
     public function acceptArticle(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti, hai accettato l\'annuncio');
+        return redirect()->back()->with('message', 'Annuncio accettato');
 
     }
     public function rejectArticle(Article $article){
         $article->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
+        return redirect()->back()->with('message', 'Annuncio rifiutato');
         
     }
 
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
         
-        return redirect()->back()->with('message' , 'Complimenti, hai richiesto di diventare revisore');
+        return redirect()->back()->with('message' , 'Richiesta per diventare revisore inoltrata con successo');
 
     }
 
@@ -38,7 +38,7 @@ class RevisorController extends Controller
     {
         Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
 
-        return redirect()->route('welcome')->with('message', 'Complimenti, L\'utente è diventato revisore');
+        return redirect()->route('welcome')->with('message', 'La richiesta per diventare revisore è stata accettata');
     }
 
     public function searchArticles(Request $request)

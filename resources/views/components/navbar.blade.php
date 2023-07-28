@@ -63,11 +63,6 @@
           <li class="nav-item">
             <a class="nav-link n-custom" href="{{route('create')}}">Crea il tuo annuncio</a>
           </li>
-
-          <form class="d-flex ps-1" role="search" method="GET" action="{{route('article.search')}}">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>         
         </ul>
         
       </div>

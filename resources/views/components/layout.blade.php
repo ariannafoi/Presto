@@ -16,19 +16,20 @@
 
     <div class="container">
         <div class="row">
-            @if (session()->has('message'))
-                <div class="alert alert-success mt-5">
-                    {{ session('message') }}
-                </div>
-            @endif
-    
-            @if (session()->has('access-denied'))
-                <div class="alert alert-danger">
-                    {{ session('access-denied') }}
-                </div>
-            @endif
             <div class="col-12 space-custom">
                 <div class="min-vh-100">
+
+                    @if (session()->has('message'))
+                        <div class="alert alert-success message-space">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+
+                    @if (session()->has('access-denied'))
+                        <div class="alert alert-danger message-space">
+                            {{ session('access-denied') }}
+                        </div>
+                    @endif
                     {{$slot}}
                 </div>
             </div>

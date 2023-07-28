@@ -34,7 +34,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 text-center">
           <p>Vuoi lavorare con noi?</p>
           <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a>
         </div>
