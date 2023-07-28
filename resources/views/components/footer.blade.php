@@ -1,90 +1,47 @@
-<!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
+{{-- FOOTER NUOVO --}}
+<div class="pt-custom">
+  <footer class="footer">
 
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3 font-scritte">
-
-        <!-- Content -->
-        <div class="container">Footer Content</h5>
-          <div class="row">
-            <div class="col-4">
-              <p>Presto.it</p>
-              <p>
-                Vuoi lavorare con noi?
-              </p>
-              <p>
-                Registrati! Clicca qui
-              </p>
-              <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a>
-            </div>
-          </div>
-
-        </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3 font-scritte">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled ">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3 font-scritte">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
     </div>
-    <!-- Grid row -->
 
-  </div>
-  <!-- Footer Links -->
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 font-scritte ">© 2020 Copyright:
-    <a href="/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    </ul>
 
-</footer>
-<!-- Footer -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <p>Vuoi lavorare con noi?</p>
+          <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a>
+        </div>
+      </div>
+    </div>
+    <p>&copy;2023 I Prodigy Six | All Rights Reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div>
