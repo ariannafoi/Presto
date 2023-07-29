@@ -9,7 +9,7 @@
     </div>
     <div class="container pt-5">
         <div class="row ">
-            <div class="col-12 col-md-8 mx-auto justify-content-center carousel-custom">
+            <div class="col-12 col-md-8 mx-auto  carousel-custom">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -18,13 +18,13 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade ">
                     <div class="carousel-inner justify-content-center ">
                       <div class="carousel-item active">
-                        <img src="https://picsum.photos/200/200" class="w-100 img-custom" alt="...">
+                        <img src="https://picsum.photos/200/200" class="img-custom" alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/201" class=" w-100 img-custom"  alt="...">
+                        <img src="https://picsum.photos/201" class="  img-custom"  alt="...">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/202" class="w-100 img-custom"  alt="...">
+                        <img src="https://picsum.photos/202" class=" img-custom"  alt="...">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
