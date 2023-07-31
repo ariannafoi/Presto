@@ -1,105 +1,60 @@
 <x-layout>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center ">
-            <div class="col-12 text-center">
-                <h1 class="display-1 font-titolo">Registrati</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6">
-                
-                <form method="post" action="{{route('register')}}">
-                    @csrf
-                    <div class="mb-3 font-scritte">
-                        <label class="form-label">Nome Utente</label>
-                        <input type="text" class="form-control" placeholder="Inserire nome utente" name="name">
-                        @error('name') <div class="error alert alert-danger">{{ $message }}</div> @enderror
-                      </div>
-                    <div class="mb-3 font-scritte">
-                      <label class="form-label ">Indirizzo Email</label>
-                      <input type="email" class="form-control" placeholder="Inserire indirizzo e-mail" name="email">
-                      @error('email') <div class="error alert alert-danger">{{ $message }}</div> @enderror
-                    </div>
-                    <div class="mb-3 font-scritte">
-                      <label class="form-label ">Password</label>
-                      <input type="password" class="form-control" placeholder="Inserisci password" name="password">
-                      @error('password') <div class="error alert alert-danger">{{ $message }}</div> @enderror
-                    </div>
-                    <div class="mb-3 font-scritte">
-                        <label class="form-label font-scritte">Conferma Password</label>
-                        <input type="password" class="form-control" name="password_confirmation"placeholder="Conferma la password">
-                        @error('password_confirmation') <div class="error alert alert-danger">{{ $message }}</div> @enderror
-                      </div>
-                    <button type="submit" class="btn btn-primary font-scritte">Registrati</button>
-                    <a href="{{route('login')}}">Hai già un account? Accedi</a>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    {{-- <div class="container-lr-custom">
+    <div class="container-lr-custom">
         <div class="login__content">
             <img src="img/bg-form.jpg" alt="login image" class="login__img">
 
-            <form action="" class="login__form">
+            <form class="login__form" method="post" action="{{route('register')}}">
+                @csrf
                 <div>
                     <h1 class="login__title">
-                        <span>Welcome</span> Back
+                        <span>Benvenuto!</span>
                     </h1>
-                    <p class="login__description">
-                        Welcome! Please login to continue.
-                    </p>
                 </div>
                 
                 <div>
                     <div class="login__inputs">
                         <div>
-                            <label for="" class="login__label">Username</label>
-                            <input type="email" placeholder="Enter your email address" required class="login__input">
+                            <label class="login__label">Username</label>
+                            <input type="name" placeholder="Inserisci il tuo username" required class="login__input" name="name">
+                            @error('name') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                         </div>
                         <div>
-                            <label for="" class="login__label">Email</label>
-                            <input type="email" placeholder="Enter your email address" required class="login__input">
+                            <label class="login__label">Email</label>
+                            <input type="email" placeholder="Inserisci la tua email" required class="login__input"name="email">
+                            @error('email') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                         </div>
 
                         <div>
-                            <label for="" class="login__label">Password</label>
+                            <label class="login__label">Password</label>
 
                             <div class="login__box">
-                                <input type="password" placeholder="Enter your password" required class="login__input" id="input-pass">
+                                <input type="password" placeholder="Inserisci la tua password" required class="login__input" id="input-pass" name="password">
                                 <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                @error('password') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
                         <div>
-                            <label for="" class="login__label">Conferma Password</label>
+                            <label class="login__label">Conferma Password</label>
 
                             <div class="login__box">
-                                <input type="confirmation_password" placeholder="Enter your password" required class="login__input" id="input-pass">
+                                <input type="password" placeholder="Inserisci nuovamente la tua password" required class="login__input" id="input-pass" name="password_confirmation">
                                 <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                @error('password_confirmation') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                             </div>
                         </div>
                     </div>
 
-                    <div class="login__check">
-                        <input type="checkbox" class="login__check-input">
-                        <label for="" class="login__check-label">Remember me</label>
-                    </div>
                 </div>
 
                 <div>
-                    <div class="login__buttons">
-                        <button class="login__button">Log In</button>
-                        <button class="login__button login__button-ghost">Sign Up</button>
+                    <div class="login__buttons d-flex justify-content-center flex-column align-items-center">
+                        <button type="submit" class="login__button login__button-ghost">Registrati</button>
+                        <a href="{{route('login')}}" class="login__forgot">Sei già registrato? Accedi!</a>
                     </div>
 
-                    <a href="#" class="login__forgot">Forgot Password?</a>
                 </div>
             </form>
         </div>
-    </div> --}}
+    </div>
 </x-layout>

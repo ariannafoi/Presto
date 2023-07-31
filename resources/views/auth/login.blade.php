@@ -1,33 +1,47 @@
 <x-layout>
 
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <h1 class="display-1 font-titolo">Accedi</h1>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 py-4 ">
+    <div class="container-lr-custom">
+        <div class="login__content">
+            <img src="img/bg-form.jpg" alt="login image" class="login__img">
+
+            <form class="login__form" method="post" action="{{route('login')}}">
+                @csrf
+                <div>
+                    <h1 class="login__title">
+                        <span>Bentornato!</span>
+                    </h1>
+                </div>
                 
-                <form method="post" action="{{route('login')}}">
-                    @csrf
-                    <div class="mb-3">
-                      <label class="form-label font-scritte" >Email address</label>
-                      <input type="email" class="form-control" name="email" placeholder="Inserisci il tuo indirizzo e-mail">
+                <div>
+                    <div class="login__inputs">
+                        <div>
+                            <label class="login__label">Email</label>
+                            <input type="email" placeholder="Inserisci la tua mail" required class="login__input"name="email">
+                            @error('email') <div class="error alert alert-danger">{{ $message }}</div> @enderror
+                        </div>
+
+                        <div>
+                            <label class="login__label">Password</label>
+                            <div class="login__box">
+                                <input type="password" placeholder="Inserisci la tua password" required class="login__input" id="input-pass" name="password">
+                                <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                @error('password') <div class="error alert alert-danger">{{ $message }}</div> @enderror
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label font-scritte">Password</label>
-                      <input type="password" class="form-control" name="password" placeholder="Inserisci la tua password">
+
+                </div>
+
+                <div>
+                    <div class="login__buttons d-flex justify-content-center flex-column align-items-center">
+                        <button type="submit" class="login__button login__button-ghost">Accedi</button>
+                        <a href="{{route('register')}}" class="login__forgot">Non hai un account? Registrati!</a>
                     </div>
-                    <button type="submit" class="btn btn-primary font-scritte">Accedi</button>
-                    <a href="{{route('register')}}">Non sei ancora registrato? Registrati</a>
-                </form>
-            </div>
+
+                </div>
+            </form>
         </div>
     </div>
-
 
 </x-layout>
