@@ -44,7 +44,7 @@
 
 
 
-    <div class="container">
+    <div class="container-sign">
         <div class="login__content">
             <img src="/public/img/bg-form.jpg" alt="login image" class="login__img">
 
