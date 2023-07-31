@@ -28,8 +28,7 @@
                     </li>
                 @endif  
               </li>
-              {{-- <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>  --}}
+
               <li><a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a></li>
                 <form action="{{route('logout')}}" id="logout-form" method="POST" class="d-none">
                   @csrf
@@ -39,11 +38,11 @@
           @else
           <li class="nav-item d-flex justify-items-center">
             <a class="nav-link n-custom" href="{{route('login')}}">Accedi</a>
-            {{-- <i class="fa-solid fa-fingerprint"></i> --}}
+
           </li>
           <li class="nav-item">
             <a class="nav-link n-custom" href="{{route('register')}}">Registrati</a>
-            {{-- <i class="fa-solid fa-id-card"></i>--}}
+
           </li>
           @endauth
           <li class="nav-item dropdown">
