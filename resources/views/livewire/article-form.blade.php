@@ -26,6 +26,6 @@
                         </select>
                         @error('category') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                       </div>
-                    <button type="submit" class="btn btn-primary">Crea Annuncio</button>
+                    <button type="submit" class="btn crea-custom">Crea Annuncio</button>
                 </form>
 </div>

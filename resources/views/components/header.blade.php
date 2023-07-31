@@ -3,7 +3,7 @@
           <div class="load-custom"></div>
               <div class="content">
                   <div class="principal">
-                      <h1>Presto.it</h1>
+                      <h1>P R E S T O</h1>
                       <p class="lead">La soluzione rapida ai tuoi bisogni</p>
                       <div class="container-sb">
                           <form class="sb" method="GET" action="{{route('article.search')}}">

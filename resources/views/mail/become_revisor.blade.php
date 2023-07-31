@@ -26,11 +26,11 @@
             <div class="container-fluid pt-3">
                 <div class="row justify-content-center h-100">
                     <div class="col-12 text-center pt-2">
-                        <h1>Un utente ha richiesto di lavorare con noi</h1>
+                        <h1>Un utente ha richiesto di diventare revisore</h1>
                         <h2>I suoi dati:</h2>
                         <p>Nome: {{$user->name}}</p>
                         <p>Email: {{$user->email}}</p>
-                        <p>Se vuoi renderlo revisore clicca qui:</p>
+                        <p>Se vuoi renderlo revisore clicca sul pulsante qui sotto</p>
                         <button class="button-mail"><a href="{{route('make.revisor', compact('user'))}}" class="text-white">Rendi revisore</a></button>
                     </div>
                 </div>

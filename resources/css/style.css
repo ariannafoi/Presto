@@ -155,11 +155,11 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
-  animation: slide 30s ease-in-out infinite;
-  margin: 0;
-  padding: 0;
+  animation: slide 20s ease-in-out infinite;
+  margin: 0px;
+  padding: 0px;
 }
 
 .content{
@@ -301,8 +301,15 @@ body{
 /* FINE HEADER */
 
 /* ULTIMI ANNUNCI */
-.card-space{
-margin: 300px 0px;
+
+.ultimi-annunci-custom{
+
+  height: 100px;
+  color: var(--first-color);
+}
+
+.text-ultimi-annunci{
+  font-size: 80px;
 }
 
 @media screen and (max-width: 767px){
@@ -310,9 +317,25 @@ margin: 300px 0px;
     margin: 30px 0px 0px 0px;
   }
 
+  .text-ultimi-annunci{
+    font-size: 30px;
+  }
+
+}
+/* FINE ULTIMI ANNUNCI */
+
+/* INIZIO SEZIONE ANNUNCI */
+.crea-custom{
+  background-color: #008e8e;
+  border: none;
 }
 
-/* FINE ULTIMI ANNUNCI */
+.crea-custom:hover{
+  background-color: #000;
+  color: #008e8e;
+}
+
+/* FINE SEZIONE ANNUNCI */
 
 
 /*INIZIO FORM LOGIN-REGISTER*/
@@ -746,13 +769,13 @@ color: black;
 .button-mail {
   font-size: 1rem;
   padding: 0.8em 2em;
-  background-color: #000;
-  border: 3px solid rgb(7, 49, 255);
+  background-color: var(--second-color);
+  border: 3px solid #000;
   border-radius: 1em;
   color: #fff;
   font-weight: bolder;
   transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-  box-shadow: -5px 5px 0px 0px rgb(7, 49, 255);
+  box-shadow: -5px 5px 0px 0px #000;
 }
 
 .button-mail:hover {
