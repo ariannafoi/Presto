@@ -122,19 +122,19 @@ body{
 
 @keyframes slide{
   0%,100%{
-      background-image: url(./images/abbigliamento.jpg);
+      background-image: url(/public/img/abbigliamento.jpg);
   }
   20%{
-      background-image: url(./images/tech.jpg);
+      background-image: url(/public/img/tech.jpg);
   }
   40%{
-      background-image: url(./images/arredamento1.jpg);
+      background-image: url(/public/img/arredamento1.jpg);
   }
   60%{
-      background-image: url(./images/musica.jpg);
+      background-image: url(/public/img/musica.jpg);
   }
   80%{
-      background-image: url(./images/giochi.jpg);
+      background-image: url(/public/img/giochi.jpg);
   }
 }
 
