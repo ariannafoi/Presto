@@ -13,7 +13,6 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-    <x-header></x-header>
 
     <div class="container">
         <div class="row">

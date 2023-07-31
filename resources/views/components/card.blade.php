@@ -10,7 +10,7 @@
       </p>
       <p class="card-text">
 
-      Categoria: <a href="{{route('categoryShow', ['category' => $article->category])}}" class="">{{$article->category->name}}</a>
+      Categoria: <a href="{{route('categoryShow', ['category' => $article->category])}}" class="a-color">{{$article->category->name}}</a>
 
       </p>
       <a href="{{route('article.show' , compact('article'))}}" class="card-button">Scopri di più</a>     

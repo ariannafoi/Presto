@@ -17,25 +17,7 @@ class ArticleForm extends Component
     public $user_id;
     public $article;
 
-    public function save(){
 
-
-        $this->article = Category::find($this->category)->articles()->create([
-            'title' => $this->title,
-            'body' => $this->body,
-            'price' => $this->price,
-            'user_id'=>Auth::user()->id,
-        ]);
-
-        $this->article->user()->associate(Auth::user());
-        return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
-        $this->reset();
-    }
-
-    public function render()
-    {
-        return view('livewire.article-form');
-    }
     protected $rules = [
         'title' => 'required|min:6',
         'body' =>'required|min:15',
@@ -52,10 +34,32 @@ class ArticleForm extends Component
         'category.required' => 'La categoria è obbligatoria',
 
     ];
-            
+
+    public function save(){
+
+        $this->validate();
+
+        $this->article = Category::find($this->category)->articles()->create([
+            'title' => $this->title,
+            'body' => $this->body,
+            'price' => $this->price,
+            'user_id'=>Auth::user()->id,
+        ]);
+
+        $this->article->user()->associate(Auth::user());
+        return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
+        $this->reset();
+    }
+        
 
     public function updated($propertyName)
-       {
-           $this->validateOnly($propertyName);
-       }
+    {
+        $this->validateOnly($propertyName);
+    }
+
+    public function render()
+    {
+        return view('livewire.article-form');
+    }
+    
 }

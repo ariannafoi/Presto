@@ -25,11 +25,11 @@
     </ul>
 
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">Contact</a></li>
     </ul>
 
     <div class="container">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <p>&copy;2023 I Prodigy Six | All Rights Reserved</p>
+    <p class="f-color">&copy;2023 I Prodigy Six | All Rights Reserved</p>
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
