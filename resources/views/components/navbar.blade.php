@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <a class="navbar-brand n-custom" href="{{route('welcome')}}"><i class="fa-regular fa-paper-plane px-2 "></i>Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-burger"></i>
+        <i class="fa-solid fa-bars i-custom"></i>
       </button>
       <div class="collapse navbar-collapse font-scritte" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ms-auto pe-4">
