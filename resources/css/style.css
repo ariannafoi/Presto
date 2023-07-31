@@ -145,7 +145,10 @@ body{
     width: 100%;
   }
   .btn-sb{
-      padding: 4px 35px;
+      padding: 4px 25px;
+  }
+  .fa-search{
+    padding: 9px 10px;
   }
   .principal h1{
       font-size: 45px;
