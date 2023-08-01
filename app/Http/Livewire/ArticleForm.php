@@ -5,10 +5,17 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 class ArticleForm extends Component
 {
+
+    use WithFileUploads;
+ 
+    public $temporary_images;
+    public $images = [];
+    public $image;
 
     public $title;
     public $body;
@@ -23,6 +30,8 @@ class ArticleForm extends Component
         'body' =>'required|min:15',
         'price' => 'required',
         'category' =>'required',
+        'images.*'=>'image|max:1024',
+        'temporary_images.*'=>'image|max:1024',
     ];
     protected $messages = [
 
@@ -32,12 +41,22 @@ class ArticleForm extends Component
         'body.min' => 'La descrizione deve avere almeno 15 caratteri',
         'price.required' => 'Il prezzo è obbligatorio',
         'category.required' => 'La categoria è obbligatoria',
+        'temporary_images.required'=>'L\'immagine è obbligatoria',
+        'temporary_images.*.image'=>'I file devono essere immagini',
+        'temporary_images.*.max'=>'L\'immagine deve essere massimo di 1Mb',
+        'images.image'=>'L\'immagine deve essere un\'immgine',
+        'images.max'=>'L\'immagine deve essere massimo di 1Mb',
 
     ];
 
     public function save(){
 
-        $this->validate();
+        $this->validate([
+            'images.*'=>'image|max:1024',
+        ]);
+        foreach ($this->images as $image) {
+            $image->store('images');
+        }
 
         $this->article = Category::find($this->category)->articles()->create([
             'title' => $this->title,
@@ -61,5 +80,7 @@ class ArticleForm extends Component
     {
         return view('livewire.article-form');
     }
+
+
     
 }
