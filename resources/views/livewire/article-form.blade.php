@@ -19,7 +19,7 @@
                       <div class="mb-3">
                         <label for="category" class="form-label">Categoria</label>
                         <select wire:model.defer="category" class="form-control" id="category">
-                          <option value="">Scegli la categoria</option>
+                          <option hidden value="pippo">Scegli la categoria</option>
                           @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                           @endforeach
@@ -36,7 +36,7 @@
                               <p>
                                 Anteprima foto: 
                               </p>
-                              <div class="row border border-4 border-info rounded shadow py-4">
+                              <div class="row border border-4 border-info rounded shadow py-4 mb-3">
                                 @foreach ($images as $key => $image)
                                     <div class="col my-3">
                                       <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">

@@ -29,7 +29,7 @@ class ArticleForm extends Component
         'title' => 'required|min:6',
         'body' =>'required|min:15',
         'price' => 'required',
-        'category' =>'required',
+        'category' =>'required|different:$category',
         'images.*'=>'image|max:1024',
         'temporary_images.*'=>'image|max:1024',
     ];
@@ -49,11 +49,24 @@ class ArticleForm extends Component
 
     ];
 
-    public function save(){
+    public function updatedTemporaryImages(){
+        if ($this->validate([
+            'temporary_images.*'=>'image|max:1024',
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
 
-        $this->validate([
-            'images.*'=>'image|max:1024',
-        ]);
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
+
+    public function save(){
+        $this->validate();
         foreach ($this->images as $image) {
             $image->store('images');
         }
@@ -64,8 +77,15 @@ class ArticleForm extends Component
             'price' => $this->price,
             'user_id'=>Auth::user()->id,
         ]);
+        
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
+                $this->article->images()->create([
+                    'path'=> $image->store('images','public')
+                ]);
+            }
+        }
 
-        $this->article->user()->associate(Auth::user());
         return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
         $this->reset();
     }

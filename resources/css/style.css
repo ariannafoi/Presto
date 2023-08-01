@@ -592,8 +592,11 @@ body{
 /* INIZIO FORM CON IMMAGINI */
 .img-preview{
   height: 300px;
-  width: 700px;
-  background-color: blueviolet;
+  width: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 /* FINE FORM CON IMMAGINI */
 
