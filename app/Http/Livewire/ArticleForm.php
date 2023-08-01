@@ -86,7 +86,7 @@ class ArticleForm extends Component
             }
         }
 
-        return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente');
+        return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente, sarà pubblicato dopo la revisione');
         $this->reset();
     }
         

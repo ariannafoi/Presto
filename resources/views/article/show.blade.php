@@ -10,23 +10,26 @@
     <div class="container pt-5">
         <div class="row ">
             <div class="col-12 col-md-8 mx-auto  carousel-custom">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
                 <div id="carouselExampleFade" class="carousel slide carousel-fade ">
-                    <div class="carousel-inner justify-content-center ">
-                      <div class="carousel-item active">
-                        <img src="https://picsum.photos/200/200" class="img-custom" alt="...">
+                  @if (count($article->images))  
+                  <div class="carousel-inner justify-content-center">
+                    @foreach ($article->images as $image)
+                      <div class="carousel-item @if($loop->first)active @endif">
+                        <img src="{{Storage::url($image->path)}}" class="img-custom" alt="...">
                       </div>
-                      <div class="carousel-item">
+                    @endforeach  
+                  </div>
+                  @else
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
                         <img src="https://picsum.photos/201" class="  img-custom"  alt="...">
                       </div>
                       <div class="carousel-item">
                         <img src="https://picsum.photos/202" class=" img-custom"  alt="...">
                       </div>
                     </div>
+                  @endif
+
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>

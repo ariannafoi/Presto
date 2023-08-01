@@ -88,7 +88,6 @@
                             <div class="col-12 col-md-3 text-center card-space mt-5 justify-content-center d-flex">
                                 <x-card 
                                 :article="$article"
-                
                                 />
                             </div>
                             @endforeach
