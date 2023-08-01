@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg nav-custom">
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
       <a class="navbar-brand n-custom" href="{{route('welcome')}}"><i class="fa-regular fa-paper-plane px-2 "></i>Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars i-custom"></i>

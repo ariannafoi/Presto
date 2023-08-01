@@ -56,7 +56,7 @@
     <x-header></x-header>
 
     <div class="container-fluid">
-        <div class="row ultimi-annunci-custom ">
+        <div class="row ultimi-annunci-custom">
             <div class="col-12 text-center mt-5">
                 <p class="text-ultimi-annunci">
                     Ecco gli ultimi annunci inseriti:
