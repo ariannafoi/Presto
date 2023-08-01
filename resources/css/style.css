@@ -4,7 +4,12 @@
   position: fixed;
   z-index: 99;
   width: 100%;
-  height: 80px;
+  height: 90px;
+}
+.navbar-logo{
+  width: 150px;
+  height: 70px;
+
 }
 .space-custom{
   padding-top: 100px ;
@@ -13,13 +18,34 @@
 .n-custom{
   color: white;  
 }
-.n-custom:hover{
+/* .n-custom:hover{
   scale: 1.05;
   border-bottom: 2px solid white;
-}
+} */
 .i-custom{
   color:white
 }
+
+.dropdown__menu{
+  background: #005555;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.dropdown-menu{
+  background: #005555;
+}
+
+.dropdown-menu a{
+  color: white;
+}
+
+.dropdown-menu-lang{
+  background: #005555;
+  text-align: center;
+}
+
 /* FINE NAVBAR */
 
 

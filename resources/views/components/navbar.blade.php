@@ -1,14 +1,11 @@
 <nav class="navbar navbar-expand-lg nav-custom">
-    <div class="container-fluid">
-      <a class="navbar-brand n-custom" href="{{route('welcome')}}"><i class="fa-regular fa-paper-plane px-2 "></i>Presto.it</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand n-custom ms-3" href="{{route('welcome')}}"><img src="/img/logopresto.png" alt="" class="navbar-logo"></a>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars i-custom"></i>
       </button>
-      <div class="collapse navbar-collapse font-scritte" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-          <li class="nav-item"> 
-            <a class="nav-link n-custom" aria-current="page" href="{{route('welcome')}}"><i class="fa-solid fa-house"></i> Home</a>
-          </li>
+      <div class="collapse navbar-collapse font-scritte dropdown__menu" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-2">
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,7 +33,7 @@
             </ul>
           </li>
           @else
-          <li class="nav-item d-flex justify-items-center">
+          <li class="nav-item">
             <a class="nav-link n-custom" href="{{route('login')}}">Accedi</a>
 
           </li>
@@ -52,7 +49,6 @@
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
                 <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
-                <li><hr class="dropdown-divider"></li>
               @endforeach
             </ul>
           </li>
@@ -64,15 +60,13 @@
           </li>
 
           
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown me-3">
             <a id="categoriesDropdown" class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Lingua
             </a>
-            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+            <ul class="dropdown-menu dropdown-menu-lang" aria-labelledby="categoriesDropdown">
               <li><x-_locale lang="it"/></li>
-              <li><hr class="dropdown-divider"></li>
               <li><x-_locale lang="en"/></li>
-              <li><hr class="dropdown-divider"></li>
               <li><x-_locale lang="es"/></li>
              
             </ul>
@@ -82,3 +76,4 @@
       </div>
     </div>
   </nav>
+
