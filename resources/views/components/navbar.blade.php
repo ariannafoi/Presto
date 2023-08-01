@@ -62,6 +62,21 @@
           <li class="nav-item">
             <a class="nav-link n-custom" href="{{route('create')}}">Crea il tuo annuncio</a>
           </li>
+
+          
+          <li class="nav-item dropdown">
+            <a id="categoriesDropdown" class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Lingua
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              <li><x-_locale lang="it"/></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><x-_locale lang="en"/></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><x-_locale lang="es"/></li>
+             
+            </ul>
+          </li>
         </ul>
         
       </div>

@@ -32,3 +32,4 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 Route::get('/ricerca/annuncio', [RevisorController::class, 'searchArticles'])->name('article.search');
+Route::post('/lingua/{lang}', [RevisorController::class, 'setLocale'])->name('setLocale');

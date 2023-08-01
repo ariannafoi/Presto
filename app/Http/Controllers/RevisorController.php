@@ -46,4 +46,11 @@ class RevisorController extends Controller
         $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(8);
         return view('article.index', compact('articles'));
     }
+
+    public function setLocale($lang){
+
+        session()->put('locale', $lang);
+        return redirect()->back();
+
+    }
 }
