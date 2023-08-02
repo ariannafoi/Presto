@@ -33,6 +33,7 @@ return [
     'createAnnouncementBtn' => 'Crear anuncio',
     'allAnnouncementOf' => 'Todos los anuncios de ',
 
+    'empty' => 'No hay anuncios para esta búsqueda',
     'noAnnouncement' => 'No hay anuncios para esta categoría!',
     'newOne' => 'Publica uno:',
 
@@ -50,4 +51,12 @@ return [
      // ALERT SUCCESS
     'returnHome' => 'Clicca per tornare alla Home',
     'operationOk' => 'Operazione effettuata con successo!',
+
+    //FOOTER
+
+    'home' => 'Hogar',
+    'about' => 'Acerca de',
+    'services' => 'Servicios',
+    'team' => 'Equipo',
+    'contact' => 'Contactos',
 ];

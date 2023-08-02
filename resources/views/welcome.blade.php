@@ -45,7 +45,7 @@
                     <div class="container">
                         <div class="row justify-content-center h-100">
                             @foreach ($articles as $article)
-                            <div class="col-12 col-md-3 text-center card-space mt-5 justify-content-center d-flex">
+                            <div class="col-12 col-md-6 col-lg-3 text-center card-space mt-5 justify-content-center d-flex">
                                 <x-card 
                                 :article="$article"
                                 />

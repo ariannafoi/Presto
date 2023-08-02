@@ -33,6 +33,8 @@ return [
     'createAnnouncementBtn' => 'Create article',
     'allAnnouncementOf' => 'All articles in ',
 
+    
+    'empty' => 'There are no articles for this search',
     'noAnnouncement' => 'There are no articles in this category yet!',
     'newOne' => 'Be the first to publish:',
 
@@ -49,4 +51,12 @@ return [
      // ALERT SUCCESS
     'returnHome' => 'Click to return to home',
     'operationOk' => 'Operation performed successfully',
+
+    //FOOTER
+
+    'home' => 'Home',
+    'about' => 'About',
+    'services' => 'Services',
+    'team' => 'Team',
+    'contact' => 'Contact',
 ];

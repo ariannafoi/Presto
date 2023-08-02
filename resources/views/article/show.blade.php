@@ -60,7 +60,7 @@
               
               </div>
     
-              <div class = "purchase-info">
+              <div class = "purchase-info d-flex">
                 <input type = "number" min = "0" value = "1">
                 <button type = "button" class = "btn">
                   Add to Cart <i class = "fas fa-shopping-cart"></i>
@@ -68,8 +68,8 @@
                 
               </div>
     
-              <div class = "social-links">
-                <p>Share At: </p>
+              <div class = "social-links ">
+                <p class="pt-3">Share At: </p>
                 <a href = "#">
                   <i class = "fab fa-facebook-f"></i>
                 </a>
@@ -81,9 +81,6 @@
                 </a>
                 <a href = "#">
                   <i class = "fab fa-whatsapp"></i>
-                </a>
-                <a href = "#">
-                  <i class = "fab fa-pinterest"></i>
                 </a>
               </div>
             </div>

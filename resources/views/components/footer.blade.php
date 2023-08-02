@@ -25,11 +25,11 @@
     </ul>
 
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link f-color" href="#">Home</a></li>
-      <li class="menu__item"><a class="menu__link f-color" href="#">About</a></li>
-      <li class="menu__item"><a class="menu__link f-color" href="#">Services</a></li>
-      <li class="menu__item"><a class="menu__link f-color" href="#">Team</a></li>
-      <li class="menu__item"><a class="menu__link f-color" href="#">Contact</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.home')}}</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.about')}}</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.services')}}</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.team')}}</a></li>
+      <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.contact')}}</a></li>
     </ul>
 
     <div class="container">

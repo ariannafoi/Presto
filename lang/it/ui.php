@@ -39,7 +39,7 @@ return [
     'allAnnouncementOf' => 'Tutti gli annunci in ',
 
 
-    'empty' => 'Non Non ci sono annunci per questa ricerca',
+    'empty' => 'Non ci sono annunci per questa ricerca',
     'noAnnouncement' => 'Non sono presenti annunci per questa categoria!',
     'newOne' => 'Pubblicane uno:',
 
@@ -50,11 +50,19 @@ return [
     'from' => 'da',
 
     // INDEX REVISOR
-        'accept' => 'Accetta',
-        'refuse' => 'Rifiuta', 
+    'accept' => 'Accetta',
+    'refuse' => 'Rifiuta', 
 
     // ALERT SUCCESS
-    'returnHome' => 'Haz clic para volver a la Home',
-    'operationOk' => 'Operación realizada con éxito',
+    'returnHome' => 'Fare clic per tornare alla Home',
+    'operationOk' => 'Operazione eseguita con successo',
+
+    //FOOTER
+
+    'home' => 'Home',
+    'about' => 'Chi siamo',
+    'services' => 'Servizi',
+    'team' => 'Team',
+    'contact' => 'Contatti',
 
 ];
