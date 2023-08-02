@@ -42,15 +42,14 @@
 
           </li>
           @endauth
-          <li class="nav-item dropdown me-3">
+          <li class="nav-item dropdown">
             <a id="categoriesDropdown" class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               {{__('ui.language')}}
             </a>
             <ul class="dropdown-menu dropdown-menu-lang" aria-labelledby="categoriesDropdown">
-              <li><x-_locale lang="it"/></li>
-              <li><x-_locale lang="en"/></li>
-              <li><x-_locale lang="es"/></li>
-             
+                <li><x-_locale lang="it"/></li>
+                <li><x-_locale lang="en"/></li>
+                <li><x-_locale lang="es"/></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
