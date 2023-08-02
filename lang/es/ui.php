@@ -3,41 +3,41 @@
 return [
 
     // HOME
-    'latestArticles' => "Ecco gli ultimi annunci inseriti:",
-    'subtitleHeader' => "La risposta rapida ai tuoi bisogni",
-    'access' => 'Accedi',
-    'register' => 'Registrati',
-    'categories' => 'Categorie',
-    'announcements' => 'Annunci',
-    'createAnnouncement' => 'Crea il tuo annuncio',
-    'language' => 'Lingua',
-    'becomeRevisor' => 'Vuoi lavorare con noi?',
-    'becomeRevisorBtn' => 'Diventa revisore',
+    'latestArticles' => "Estos son los anuncios publicados:",
+    'subtitleHeader' => "La rápida respuesta a tus necesidades",
+    'access' => 'Acceso',
+    'register' => 'Iniciar sesión',
+    'categories' => 'Categorías',
+    'announcements' => 'Anuncios',
+    'createAnnouncement' => 'Crea tu anuncio',
+    'language' => 'Lengua',
+    'becomeRevisor' => 'Quiere trabajar con nosotros?',
+    'becomeRevisorBtn' => 'Conviértete en revisor',
 
     // LOGIN-REGISTER FORM
-    'welcomeBack' => 'Bentornato!',
-    'signUpRequest' => 'Non hai un account? Registrati!',
-    'welcome' => 'Benvenuto!',
-    'confirmationPassword' => 'Conferma Password',
-    'signInRequest' => 'Sei già registrato? Accedi!',
+    'welcomeBack' => 'Bienvenido de nuevo!',
+    'signUpRequest' => 'No tiene una cuenta? Iniciar sesión!',
+    'welcome' => 'Bienvenido!',
+    'confirmationPassword' => 'Confirmar Contraseña',
+    'signInRequest' => 'Ya estás registrado? Acceso!',
 
     // ANNUNCI
-    'allAnnouncements' => 'Tutti Gli Annunci',
-    'title' => 'Titolo',
-    'description' => 'Descrizione',
-    'price' => 'Prezzo',
-    'category' => 'Categoria',
-    'createAnnouncementBtn' => 'Crea annuncio',
-    'allAnnouncementOf' => 'Tutti gli annunci di',
+    'allAnnouncements' => 'Todos los anuncios',
+    'title' => 'Título',
+    'description' => 'Descripción',
+    'price' => 'Precio',
+    'category' => 'Categoría',
+    'createAnnouncementBtn' => 'Crear anuncio',
+    'allAnnouncementOf' => 'Todos los anuncios de',
 
-    'noAnnouncement' => 'Non sono presenti annunci per questa categoria!',
-    'newOne' => 'Pubblicane uno:',
+    'noAnnouncement' => 'No hay anuncios para esta categoría!',
+    'newOne' => 'Publica uno:',
 
     // CARD & DETAILS
-    'findOut' => 'Scopri di più',
-    'detailOf' => 'Dettaglio di',
-    'publish' => 'Pubblicato il',
-    'from' => 'da',
+    'findOut' => 'Saber más',
+    'detailOf' => 'Detalle de',
+    'publish' => 'Publicado en',
+    'from' => 'de',
     
 
 ];
