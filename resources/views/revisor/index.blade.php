@@ -16,7 +16,7 @@
               <div class="carousel-inner justify-content-center">
                 @foreach ($article_to_check->images as $image)
                   <div class="carousel-item @if($loop->first)active @endif">
-                    <img src="{{Storage::url($image->path)}}" class="img-custom" alt="...">
+                    <img src="{{$article->images()->first()->getUrl(400,300)}}" class="img-custom" alt="...">
                   </div>
                 @endforeach  
               </div>

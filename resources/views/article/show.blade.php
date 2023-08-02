@@ -65,33 +65,27 @@
             <div class = "product-imgs">
               @if (count($article->images))  
               <div class = "img-display">
-                @foreach ($article->images as $image)
-                <div class = "img-showcase" @if($loop->first)active @endif">
-                  <img src="{{Storage::url($image->path)}}" class="" alt="...">
+                <div class = "img-showcase">
+                  @foreach ($article->images as $image)
+                    <img src="{{$image->getUrl(400,300)}}" class="" alt="...">
+                  @endforeach 
                 </div>
-                @endforeach 
               </div>
               <div class = "img-select">
-                <div class = "img-item">
-                  <a href = "#" data-id = "1">
-                    <img src = "shoe_1.jpg" alt = "shoe image">
-                  </a>
-                </div>
-                <div class = "img-item">
-                  <a href = "#" data-id = "2">
-                    <img src = "shoe_2.jpg" alt = "shoe image">
-                  </a>
-                </div>
-                <div class = "img-item">
-                  <a href = "#" data-id = "3">
-                    <img src = "shoe_3.jpg" alt = "shoe image">
-                  </a>
-                </div>
-                <div class = "img-item">
-                  <a href = "#" data-id = "4">
-                    <img src = "shoe_4.jpg" alt = "shoe image">
-                  </a>
-                </div>
+                @php
+                    $counter = 1;
+                @endphp
+                
+                @foreach ($article->images as $image)
+                  <div class = "img-item">
+                    <a href = "#" data-id = "{{$counter}}">
+                      <img src = "{{$image->getUrl(400,300)}}" alt = "shoe image">
+                    </a>
+                  </div>
+                  @php
+                  $counter++;
+                  @endphp
+                @endforeach
               </div>
             </div>
               @else
