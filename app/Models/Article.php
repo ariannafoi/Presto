@@ -46,8 +46,8 @@ class Article extends Model
     }
 
     public function getTitleSubstring(){
-        if(strlen($this->title) > 15){
-            return substr($this->title, 0, 15). '...';
+        if(strlen($this->title) > 10){
+            return substr($this->title, 0, 10). '...';
         }
         else{
             return $this->title;

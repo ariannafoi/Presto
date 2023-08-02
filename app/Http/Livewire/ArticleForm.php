@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class ArticleForm extends Component
 {
@@ -66,28 +68,35 @@ class ArticleForm extends Component
     }
 
     public function save(){
-        $this->validate();
-        foreach ($this->images as $image) {
-            $image->store('images');
-        }
 
-        $this->article = Category::find($this->category)->articles()->create([
-            'title' => $this->title,
-            'body' => $this->body,
-            'price' => $this->price,
-            'user_id'=>Auth::user()->id,
-        ]);
-        
-        if (count($this->images)) {
-            foreach ($this->images as $image) {
-                $this->article->images()->create([
-                    'path'=> $image->store('images','public')
+            $this->validate();
+                foreach ($this->images as $image) {
+                    $image->store('images');
+                }
+
+                $this->article = Category::find($this->category)->articles()->create([
+                    'title' => $this->title,
+                    'body' => $this->body,
+                    'price' => $this->price,
+                    'user_id'=>Auth::user()->id,
                 ]);
-            }
-        }
+                
+                if (count($this->images)) {
+                    foreach ($this->images as $image) {
+                        // $this->article->images()->create([
+                        //     'path'=> $image->store('images','public')
+                        // ]);
+                        $newFileName = "articles/{$this->article->id}";
+                        $newImage = $this->article->images()->create(['path'=> $image->store($newFileName, 'public')]);
 
-        return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente, sarà pubblicato dopo la revisione');
-        $this->reset();
+                        dispatch(new ResizeImage($newImage->path, 400, 300));
+                    }
+
+                    File::deleteDirectory(storage_path('/app/livewire-tmp'));
+                }
+
+                return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente, sarà pubblicato dopo la revisione');
+                $this->reset();
     }
         
 
