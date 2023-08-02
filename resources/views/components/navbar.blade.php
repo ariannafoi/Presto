@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg nav-custom">
-    <div class="container-fluid p-0">
-      <a class="navbar-brand n-custom ms-3" href="{{route('welcome')}}"><img src="/img/logopresto.png" alt="" class="navbar-logo"></a>
-      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand n-custom " href="{{route('welcome')}}"><img src="/img/logopresto.png" alt="" class="navbar-logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars i-custom"></i>
       </button>
       <div class="collapse navbar-collapse font-scritte dropdown__menu" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-2">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
