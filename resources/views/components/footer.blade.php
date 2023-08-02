@@ -33,14 +33,14 @@
     </ul>
 
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-12 col-md-4 text-center">
           <p>{{__('ui.becomeRevisor')}}</p>
           <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">{{__('ui.becomeRevisorBtn')}}</a>
         </div>
       </div>
     </div>
-    <p class="f-color">&copy;2023 I Prodigy Six | All Rights Reserved</p>
+    <p class="f-color text-center">&copy;2023 I Prodigy Six | All Rights Reserved</p>
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

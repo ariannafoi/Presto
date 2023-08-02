@@ -609,14 +609,19 @@ a{
     min-width: 190px;
     min-height: 254px;
     border-radius: 20px;
-    background: #f5f5f5;
+    background: transparent;
     position: relative;
-    padding: 28.8px;
-    border: 2px solid #c3c6ce;
+    padding: 15px;
+    border: 3px solid #005555;
     transition: 0.5s ease-out;
     overflow: visible;
 }
 
+.card-img-custom{
+  border-radius: 45%;
+  margin-bottom: 15px;
+
+}
 .a-color{
   color: #008e8e;
 }
@@ -658,15 +663,18 @@ color: black;
     opacity: 0;
     transition: 0.3s ease-out;
 }
-   
-.text-body {
-    color: rgb(134, 134, 134);
-}
+
    
 /*Text card*/
 .text-title {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
+    color: #008e8e;
+}
+
+.card-footer{
+  font-style: italic;
+  font-weight: 550;
 }
    
 /*Hover card*/

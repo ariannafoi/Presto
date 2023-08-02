@@ -2,7 +2,7 @@
 
     <div class="container-lr-custom">
         <div class="login__content">
-            <img src="img/bg-form.jpg" alt="login image" class="login__img">
+            <img src="img/bg-form1.jpg" alt="login image" class="login__img">
 
             <form class="login__form" method="post" action="{{route('register')}}">
                 @csrf
