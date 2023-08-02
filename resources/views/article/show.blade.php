@@ -1,6 +1,6 @@
 <x-layout>
     
-    <div class="container-fluid">
+    {{-- <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="display-1 font-titolo">{{__('ui.detailOf')}} {{$article->title}}</h1>
@@ -48,6 +48,108 @@
               <p class="card-footer">{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
           </div>
         </div>
-    </div>
+    </div> --}}
+
+   
+      
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+              <div class="col-12 text-center">
+                  <h1 class="display-1 font-titolo">{{__('ui.detailOf')}} {{$article->title}}</h1>
+              </div>
+          </div>
+      </div>
+        <div class = "card-wrapper-detail">
+          <div class = "card">
+            <!-- card left -->
+            <div class = "product-imgs">
+              @if (count($article->images))  
+              <div class = "img-display">
+                @foreach ($article->images as $image)
+                <div class = "img-showcase" @if($loop->first)active @endif">
+                  <img src="{{Storage::url($image->path)}}" class="" alt="...">
+                </div>
+                @endforeach 
+              </div>
+              <div class = "img-select">
+                <div class = "img-item">
+                  <a href = "#" data-id = "1">
+                    <img src = "shoe_1.jpg" alt = "shoe image">
+                  </a>
+                </div>
+                <div class = "img-item">
+                  <a href = "#" data-id = "2">
+                    <img src = "shoe_2.jpg" alt = "shoe image">
+                  </a>
+                </div>
+                <div class = "img-item">
+                  <a href = "#" data-id = "3">
+                    <img src = "shoe_3.jpg" alt = "shoe image">
+                  </a>
+                </div>
+                <div class = "img-item">
+                  <a href = "#" data-id = "4">
+                    <img src = "shoe_4.jpg" alt = "shoe image">
+                  </a>
+                </div>
+              </div>
+            </div>
+              @else
+              
+            @endif
+            <!-- card right -->
+            <div class = "product-content">
+              <h2 class = "product-title">{{__('ui.title')}}: {{$article->title}}</h2>
+              
+    
+    
+              <div class = "product-price">
+                
+                <p class = "new-price">{{__('ui.price')}}: {{$article->price}} €</p>
+              </div>
+    
+              <div class = "product-detail">
+               
+                <p>{{__('ui.description')}}: {{$article->body}}</p>
+                
+                <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">{{__('ui.category')}}: {{$article->category->name}}</a>
+    
+                <p >{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
+              
+              </div>
+    
+              <div class = "purchase-info">
+                <input type = "number" min = "0" value = "1">
+                <button type = "button" class = "btn">
+                  Add to Cart <i class = "fas fa-shopping-cart"></i>
+                </button>
+                
+              </div>
+    
+              <div class = "social-links">
+                <p>Share At: </p>
+                <a href = "#">
+                  <i class = "fab fa-facebook-f"></i>
+                </a>
+                <a href = "#">
+                  <i class = "fab fa-twitter"></i>
+                </a>
+                <a href = "#">
+                  <i class = "fab fa-instagram"></i>
+                </a>
+                <a href = "#">
+                  <i class = "fab fa-whatsapp"></i>
+                </a>
+                <a href = "#">
+                  <i class = "fab fa-pinterest"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+       
+
+
 
 </x-layout>
