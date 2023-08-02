@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h1 class="display-1 font-titolo">Dettaglio di {{$article->title}}</h1>
+                <h1 class="display-1 font-titolo">{{__('ui.detailOf')}} {{$article->title}}</h1>
             </div>
         </div>
     </div>
@@ -41,11 +41,11 @@
                   </div>
             </div>
             <div class="col-12 col-md-4 justify-content-center d-flex align-items-center flex-column mt-3 ">
-              <h5 class="card-title">Titolo: {{$article->title}}</h5>
-              <p class="card-text">Descrizione: {{$article->body}}</p>
-              <p class="card-text">Prezzo: {{$article->price}} €</p>
-              <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">Categoria: {{$article->category->name}}</a>
-              <p class="card-footer">Pubblicato il {{$article->created_at->format('d/m/Y')}} da {{$article->user->name ?? ''}}</p>
+              <h5 class="card-title">{{__('ui.title')}}: {{$article->title}}</h5>
+              <p class="card-text">{{__('ui.description')}}: {{$article->body}}</p>
+              <p class="card-text">{{__('ui.price')}}: {{$article->price}} €</p>
+              <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">{{__('ui.category')}}: {{$article->category->name}}</a>
+              <p class="card-footer">{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
           </div>
         </div>
     </div>

@@ -3,7 +3,7 @@
     <div class="container-fluid mt-3">
         <div class="row justify-content-center h-100">
             <div class="col-12 text-center">
-                <h1 class="display-1 font-titolo">Tutti i prodotti in {{$category->name}}</h1>
+                <h1 class="display-1 font-titolo">{{__('ui.allAnnouncementOf')}}{{$category->name}}</h1>
             </div>
         </div>
     </div>
@@ -19,10 +19,10 @@
             @empty
                 <div class="col-12 mt-4">
                     <p class="h2">
-                        Non sono presenti annunci per questa categoria!
+                        {{__('ui.noAnnouncement')}}
                     </p>
                     <p class="h3">
-                        Pubblicane uno: <a href="{{route('create')}}" class="btn btn-success shadow">Nuovo Annuncio</a>
+                        {{__('ui.newOne')}} <a href="{{route('create')}}" class="btn btn-success shadow">{{__('ui.createAnnouncementBtn')}}</a>
                     </p>
                 </div>
             @endforelse

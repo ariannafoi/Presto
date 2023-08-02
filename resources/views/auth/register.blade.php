@@ -8,7 +8,7 @@
                 @csrf
                 <div>
                     <h1 class="login__title">
-                        <span>Benvenuto!</span>
+                        <span>{{__('ui.welcome')}}!</span>
                     </h1>
                 </div>
                 
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div>
-                            <label class="login__label">Conferma Password</label>
+                            <label class="login__label">{{__('ui.confirmationPassword')}}</label>
 
                             <div class="login__box">
                                 <input type="password" placeholder="Inserisci nuovamente la tua password" required class="login__input" id="input-pass" name="password_confirmation">
@@ -49,8 +49,8 @@
 
                 <div>
                     <div class="login__buttons d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="login__button login__button-ghost">Registrati</button>
-                        <a href="{{route('login')}}" class="login__forgot">Sei già registrato? Accedi!</a>
+                        <button type="submit" class="login__button login__button-ghost">{{__('ui.register')}}</button>
+                        <a href="{{route('login')}}" class="login__forgot">{{__('ui.signInRequest')}}</a>
                     </div>
 
                 </div>

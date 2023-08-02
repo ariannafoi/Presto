@@ -10,12 +10,12 @@
       </p>
       <p class="card-text">
 
-      Categoria: <a href="{{route('categoryShow', ['category' => $article->category])}}" class="a-color">{{$article->category->name}}</a>
+        {{__('ui.category')}}: <a href="{{route('categoryShow', ['category' => $article->category])}}" class="a-color">{{$article->category->name}}</a>
 
       </p>
-      <a href="{{route('article.show' , compact('article'))}}" class="card-button">Scopri di più</a>     
+      <a href="{{route('article.show' , compact('article'))}}" class="card-button">{{__('ui.findOut')}}</a>     
       <p class="card-footer">
-        Pubblicato il {{$article->created_at->format('d/m/Y')}} - Autore: {{$article->user->name}}
+        {{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name}}
       </p>     
     </div>
   </div>

@@ -9,15 +9,18 @@ return [
     'register' => 'Iniciar sesión',
     'categories' => 'Categorías',
     'announcements' => 'Anuncios',
+    'revisorZone' => 'Área de revisores',
     'createAnnouncement' => 'Crea tu anuncio',
     'language' => 'Lengua',
     'becomeRevisor' => 'Quiere trabajar con nosotros?',
     'becomeRevisorBtn' => 'Conviértete en revisor',
+    'selectCategory' => 'Elige la categoría',
+    'previewPhoto' => 'Vista previa de la foto',
 
     // LOGIN-REGISTER FORM
     'welcomeBack' => 'Bienvenido de nuevo!',
     'signUpRequest' => 'No tiene una cuenta? Iniciar sesión!',
-    'welcome' => 'Bienvenido!',
+    'welcome' => 'Bienvenido',
     'confirmationPassword' => 'Confirmar Contraseña',
     'signInRequest' => 'Ya estás registrado? Acceso!',
 
@@ -28,7 +31,7 @@ return [
     'price' => 'Precio',
     'category' => 'Categoría',
     'createAnnouncementBtn' => 'Crear anuncio',
-    'allAnnouncementOf' => 'Todos los anuncios de',
+    'allAnnouncementOf' => 'Todos los anuncios de ',
 
     'noAnnouncement' => 'No hay anuncios para esta categoría!',
     'newOne' => 'Publica uno:',
@@ -40,4 +43,11 @@ return [
     'from' => 'de',
     
 
+     // INDEX REVISOR
+     'accept' => 'Aceptar',
+     'refuse' => 'Se niega', 
+
+     // ALERT SUCCESS
+    'returnHome' => 'Clicca per tornare alla Home',
+    'operationOk' => 'Operazione effettuata con successo!',
 ];

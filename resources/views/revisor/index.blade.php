@@ -45,9 +45,9 @@
    </div>
   </div>
       <div class="">
-          <h5 class="card-title">Titolo: {{$article_to_check->title}}</h5>
-          <p class="card-text">Descrizione: {{$article_to_check->body}}</p>
-          <p class="card-text">Pubblicato il {{$article_to_check->created_at->format('d/m/Y')}}</p>
+          <h5 class="card-title">{{__('ui.title')}}: {{$article_to_check->title}}</h5>
+          <p class="card-text">{{__('ui.description')}}: {{$article_to_check->body}}</p>
+          <p class="card-text">{{__('ui.publish')}} {{$article_to_check->created_at->format('d/m/Y')}}</p>
         </div>
         </div>
 
@@ -57,14 +57,14 @@
                       <form action="{{route('revisor.accept_article',['article'=>$article_to_check])}}"method='POST'>
                       @csrf
                       @method('PATCH')
-                      <button type="submit"class="btn btn-success shadow">Accetta</button>
+                      <button type="submit"class="btn btn-success shadow">{{__('ui.accept')}}</button>
                       </form>
                   </div>
                   <div class="col-12 col-md-6 ">
                       <form action="{{route('revisor.reject_article',['article'=>$article_to_check])}}"method='POST'>
                       @csrf
                       @method('PATCH')
-                      <button type="submit"class="btn btn-danger shadow">Rifiuta</button>
+                      <button type="submit"class="btn btn-danger shadow">{{__('ui.refuse')}}</button>
                       </form>
                   </div>  
               </div>

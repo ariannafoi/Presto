@@ -8,10 +8,10 @@
 
                 <img src="spunta.jpg" alt="" class="modal__img">
 
-            <h1 class="modal__title">Operazione effettuata con successo!</h1>
+            <h1 class="modal__title">{{__('ui.operationOk')}}</h1>
 
             <button class="modal__button modal__button-width">
-                Clicca per tornare alla Home
+                {{__('ui.returnHome')}}
             </button>
 
         </div>

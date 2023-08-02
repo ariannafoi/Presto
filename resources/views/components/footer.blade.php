@@ -35,8 +35,8 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-4 text-center">
-          <p>Vuoi lavorare con noi?</p>
-          <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">Diventa revisore</a>
+          <p>{{__('ui.becomeRevisor')}}</p>
+          <a href="{{route('become.revisor')}}" class="btn btn-warning shadow text-light">{{__('ui.becomeRevisorBtn')}}</a>
         </div>
       </div>
     </div>

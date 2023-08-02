@@ -9,7 +9,7 @@
                 @csrf
                 <div>
                     <h1 class="login__title">
-                        <span>Bentornato!</span>
+                        <span>{{__('ui.welcomeBack')}}</span>
                     </h1>
                 </div>
                 
@@ -35,8 +35,8 @@
 
                 <div>
                     <div class="login__buttons d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="login__button login__button-ghost">Accedi</button>
-                        <a href="{{route('register')}}" class="login__forgot">Non hai un account? Registrati!</a>
+                        <button type="submit" class="login__button login__button-ghost">{{__('ui.access')}}</button>
+                        <a href="{{route('register')}}" class="login__forgot">{{__('ui.signUpRequest')}}</a>
                     </div>
 
                 </div>

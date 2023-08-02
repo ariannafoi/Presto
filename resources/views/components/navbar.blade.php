@@ -9,14 +9,14 @@
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Benvenuto {{Auth::user()->name}}
+              {{__('ui.welcome')}} {{Auth::user()->name}}
             </a>
             <ul class="dropdown-menu">
                <li>
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                       <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-succes btn-sm position-relative" aria-current="page">
-                        Zona revisore
+                        {{__('ui.revisorZone')}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Article::toBeRevisonedCount()}}
                             <span class="visually-hidden">Messaggio non letto</span>
@@ -34,17 +34,17 @@
           </li>
           @else
           <li class="nav-item">
-            <a class="nav-link n-custom" href="{{route('login')}}">Accedi</a>
+            <a class="nav-link n-custom" href="{{route('login')}}">{{__('ui.access')}}</a>
 
           </li>
           <li class="nav-item">
-            <a class="nav-link n-custom" href="{{route('register')}}">Registrati</a>
+            <a class="nav-link n-custom" href="{{route('register')}}">{{__('ui.register')}}</a>
 
           </li>
           @endauth
           <li class="nav-item dropdown">
             <a id="categoriesDropdown" class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
+              {{__('ui.categories')}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
@@ -53,16 +53,16 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link n-custom" aria-current="page" href="{{route('article.index')}}">Annunci</a>
+            <a class="nav-link n-custom" aria-current="page" href="{{route('article.index')}}">{{__('ui.announcements')}}</a>
           </li>         
           <li class="nav-item">
-            <a class="nav-link n-custom" href="{{route('create')}}">Crea il tuo annuncio</a>
+            <a class="nav-link n-custom" href="{{route('create')}}">{{__('ui.createAnnouncement')}}</a>
           </li>
 
           
           <li class="nav-item dropdown me-3">
             <a id="categoriesDropdown" class="nav-link dropdown-toggle n-custom " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Lingua
+              {{__('ui.language')}}
             </a>
             <ul class="dropdown-menu dropdown-menu-lang" aria-labelledby="categoriesDropdown">
               <li><x-_locale lang="it"/></li>
