@@ -3,7 +3,7 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
               <div class="col-12 text-center">
-                  <h1 class="display-1 font-titolo">{{$article_to_check ? __('ui.articleRevision'):    __('ui.noAnnouncementRevisor')}}</h1>
+                  <h1 class="display-1 font-titolo">{{$article_to_check ? __('ui.articleRevision') : __('ui.noAnnouncementRevisor')}}</h1>
               </div>
           </div>
       </div>
@@ -32,7 +32,7 @@
                     </a>
                   </div>
                   @php
-                  $counter++;
+                    $counter++;
                   @endphp
                 @endforeach
               </div>
@@ -60,14 +60,33 @@
                 <p >{{__('ui.publish')}} {{$article_to_check->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article_to_check->user->name ?? ''}}</p>
               
               </div>
-    
-              {{-- <div class = "purchase-info d-flex">
-                <input type = "number" min = "0" value = "1">
-                <button type = "button" class = "btn">
-                  Add to Cart <i class = "fas fa-shopping-cart py-2"></i>
-                </button>                
-              </div> --}}
               
+              
+
+              <div class="container">
+                <div class="row">
+                  
+                  <div class="col-12">
+                    <div class="product-detail">
+                      <h5 class="tc-accent">Revisione Immagini</h5>
+                      <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                      <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                      <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                      <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                      <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    @if ($image->labels)
+                      @foreach ($image->labels as $label)
+                          <p class="d-inline">#{{$label}}</p>
+                      @endforeach
+                    @endif
+                  </div>
+                </div>
+              </div>
+
+
               <div class="container pt-5">
                 <div class="row text-center">
                         <div class="col-12 col-md-6 pb-2">
