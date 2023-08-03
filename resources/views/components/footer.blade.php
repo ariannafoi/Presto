@@ -9,7 +9,7 @@
       <div class="wave" id="wave4"></div>
     </div>
 
-    <ul class="social-icon">
+    <ul class="social-icon ps-0">
       <li class="social-icon__item"><a class="social-icon__link" href="#">
           <ion-icon name="logo-facebook"></ion-icon>
         </a></li>
@@ -24,7 +24,7 @@
         </a></li>
     </ul>
 
-    <ul class="menu">
+    <ul class="menu ps-0">
       <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.home')}}</a></li>
       <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.about')}}</a></li>
       <li class="menu__item"><a class="menu__link f-color" href="#">{{__('ui.services')}}</a></li>
