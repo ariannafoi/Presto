@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
-    public function home() {
+    public function home(Category $category) {
 
         $articles = Article::where('is_accepted', true)->take(4)->orderBy('created_at' , 'desc')->get();
         // dd($articles);
-        return view('welcome', compact('articles'));
+        return view('welcome', compact('articles', 'category'));
     }
 
     public function categoryShow(Category $category){
