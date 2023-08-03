@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg nav-custom">
     <div class="container-fluid p-0">
       <a class="navbar-brand n-custom " href="{{route('welcome')}}"><img src="/img/logopresto.png" alt="" class="navbar-logo"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars i-custom"></i>
       </button>
       <div class="collapse navbar-collapse font-scritte dropdown__menu" id="navbarSupportedContent">
@@ -15,7 +15,7 @@
                <li>
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
-                      <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-succes btn-sm position-relative" aria-current="page">
+                      <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-succes btn-sm position-relative me-2" aria-current="page">
                         {{__('ui.revisorZone')}}
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Article::toBeRevisonedCount()}}
@@ -26,7 +26,7 @@
                 @endif  
               </li>
 
-              <li><a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a></li>
+              <li><a class="dropdown-item text-center" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a></li>
                 <form action="{{route('logout')}}" id="logout-form" method="POST" class="d-none">
                   @csrf
                 </form>

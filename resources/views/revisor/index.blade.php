@@ -76,7 +76,7 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
               <div class="col-12 text-center">
-                  <h1 class="display-1 font-titolo">{{$article_to_check ? 'Ecco l\'annuncio da revisionare ': 'Non ci sono annunci da revisionare'}}</h1>
+                  <h1 class="display-1 font-titolo">{{$article_to_check ? 'Ecco l\'annuncio da revisionare ': "Non ci sono annunci da revisionare"}}</h1>
               </div>
           </div>
       </div>
@@ -134,14 +134,14 @@
               
               </div>
     
-              <div class = "purchase-info d-flex">
+              {{-- <div class = "purchase-info d-flex">
                 <input type = "number" min = "0" value = "1">
                 <button type = "button" class = "btn">
                   Add to Cart <i class = "fas fa-shopping-cart py-2"></i>
                 </button>                
-              </div>
+              </div> --}}
               
-              <div class="container">
+              <div class="container pt-5">
                 <div class="row text-center">
                         <div class="col-12 col-md-6 pb-2">
                             <form action="{{route('revisor.accept_article',['article'=>$article_to_check])}}"method='POST'>

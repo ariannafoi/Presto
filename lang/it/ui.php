@@ -51,7 +51,8 @@ return [
 
     // INDEX REVISOR
     'accept' => 'Accetta',
-    'refuse' => 'Rifiuta', 
+    'refuse' => 'Rifiuta',
+    'noAnnouncementRevisor' => 'Non ci sono annunci da revisionare',
 
     // ALERT SUCCESS
     'returnHome' => 'Fare clic per tornare alla Home',
