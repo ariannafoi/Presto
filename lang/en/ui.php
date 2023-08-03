@@ -49,7 +49,10 @@ return [
     
      // INDEX REVISOR
      'accept' => 'Accept',
-     'refuse' => 'Refuse', 
+     'refuse' => 'Refuse',
+     'articleRevision' => 'Here it is the article to revise ',
+     'noAnnouncementRevisor' => 'There are no articles to review',
+ 
 
      // ALERT SUCCESS
     'returnHome' => 'Click to return to home',

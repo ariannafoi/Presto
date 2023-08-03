@@ -14,37 +14,7 @@
 <body>
     <x-navbar></x-navbar>
     <x-header></x-header>
-
-
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-
-                @php
-                    $counter = 1;
-                @endphp
-
-                @foreach ($categories as $category)
-                <div class="col-lg-3 col-6">
-                    <a href="{{route('categoryShow', compact('category'))}}">
-                        <div class="service-item-category position-relative text-center">
-                            <div class="service-text-category text-center align-items-center d-flex flex-column">
-                                <img class=" icon-category" src="img/icons/cp{{$counter}}.png" alt="Icon">
-                                <h3 class="pb-4">{{$category->name}}</h3>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                @php
-                    $counter++;
-                @endphp
-                
-                @endforeach
-
-            </div>
-        </div>
-    </div>
+    <x-carouselCategory></x-carouselCategory>
 
     <div class="container-fluid">
         <div class="row ultimi-annunci-custom">

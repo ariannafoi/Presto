@@ -54,6 +54,7 @@ return [
     // INDEX REVISOR
     'accept' => 'Accetta',
     'refuse' => 'Rifiuta',
+    'articleRevision' => 'Ecco l\'annuncio da revisionare ',
     'noAnnouncementRevisor' => 'Non ci sono annunci da revisionare',
 
     // ALERT SUCCESS

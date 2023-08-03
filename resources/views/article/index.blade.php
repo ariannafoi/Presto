@@ -1,7 +1,8 @@
 <x-layout>
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center h-100">
+    <x-carouselCategory></x-carouselCategory>
+
+    <div class="container-fluid py-5">
+        <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="display-1 font-titolo">{{__('ui.allAnnouncements')}}</h1>
             </div>

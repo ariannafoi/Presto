@@ -48,7 +48,10 @@ return [
 
      // INDEX REVISOR
      'accept' => 'Aceptar',
-     'refuse' => 'Se niega', 
+     'refuse' => 'Se niega',
+     'articleRevision' => 'Aquí está el anuncio para ser       revisado',
+     'noAnnouncementRevisor' => 'No hay anuncios para revisar',
+  
 
      // ALERT SUCCESS
     'returnHome' => 'Clicca per tornare alla Home',
