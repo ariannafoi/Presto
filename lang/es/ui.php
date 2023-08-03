@@ -42,6 +42,8 @@ return [
     'detailOf' => 'Detalle de',
     'publish' => 'Publicado en',
     'from' => 'de',
+    'cart' => 'Añadir a la cesta',
+    'btnCancel'=>'Cancelar',
     
 
      // INDEX REVISOR

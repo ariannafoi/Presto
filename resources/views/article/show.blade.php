@@ -54,7 +54,7 @@
                
                 <p>{{__('ui.description')}}: {{$article->body}}</p>
                 
-                <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">{{__('ui.category')}}: {{$article->category->name}}</a>
+                <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">{{__('ui.category')}} : {{$article->category->name}}</a>
     
                 <p >{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
               
@@ -63,7 +63,7 @@
               <div class = "purchase-info d-flex">
                 <input type = "number" min = "0" value = "1">
                 <button type = "button" class = "btn">
-                  Add to Cart <i class = "fas fa-shopping-cart"></i>
+                  {{__('ui.cart')}}<i class = "fas fa-shopping-cart ps-2"></i>
                 </button>
                 
               </div>

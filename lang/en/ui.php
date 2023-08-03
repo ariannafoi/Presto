@@ -30,6 +30,8 @@ return [
     'description' => 'Description',
     'price' => 'Price',
     'category' => 'Category',
+    'btnCancel'=>'Delete',
+
     'createAnnouncementBtn' => 'Create article',
     'allAnnouncementOf' => 'All articles in ',
 
@@ -43,6 +45,7 @@ return [
     'detailOf' => 'Details of',
     'publish' => 'Published on',
     'from' => 'by',
+    'cart' => 'Add to cart',
     
      // INDEX REVISOR
      'accept' => 'Accept',

@@ -34,6 +34,7 @@ return [
     'category' => 'Categoria',
     'previewPhoto' => 'Anteprima foto',
     'selectCategory' => 'Scegli la categoria',
+    'btnCancel'=>'Cancella',
 
     'createAnnouncementBtn' => 'Crea annuncio',
     'allAnnouncementOf' => 'Tutti gli annunci in ',
@@ -48,6 +49,7 @@ return [
     'detailOf' => 'Dettaglio di',
     'publish' => 'Pubblicato il',
     'from' => 'da',
+    'cart' => 'Aggiungi al carrello',
 
     // INDEX REVISOR
     'accept' => 'Accetta',
