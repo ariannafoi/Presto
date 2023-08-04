@@ -9,10 +9,16 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid w-100">
         <div class="row justify-content-center h-100">
-            @forelse ($articles as $article)
-            <div class="col-12 col-sm-6 col-xxl-4 text-center my-4 d-flex justify-content-center">
+           <div class="col-12 p-0">
+            <form class="d-flex" method="GET" action="{{route('article.search')}}">
+                <input type="text" placeholder="{{__('ui.searchHere')}}" name="searched">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+        </div>
+        @forelse ($articles as $article)
+     <div class="col-12 col-sm-4 col-xxl-3 text-center my-4 d-flex justify-content-center">
                 <x-card 
                 :article="$article"
 
