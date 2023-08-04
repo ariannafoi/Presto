@@ -895,6 +895,23 @@ color: black;
 
 /* Carousel dettaglio */
 
+/* .paginate-custom{
+  border: 1px solid black;
+} */
+.paginate-custom{
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 1023px){
+  .paginate-custom{
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+
 *{
   box-sizing: border-box;
   padding: 0;

@@ -45,7 +45,16 @@
                 </div>
             </div>
 
-            {{$articles->links()}}
+           
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 paginate-custom mt-5">
+                        
+                            {{$articles->links()}}
+                        
+                    </div>
+                </div>
+            </div>
             
         </div>
     </div>

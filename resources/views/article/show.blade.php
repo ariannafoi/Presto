@@ -7,7 +7,7 @@
               </div>
           </div>
       </div>
-        <div class = "card-wrapper-detail">
+        <div class = "card-wrapper-detail mt-4">
           <div class = "card">
             <!-- card left -->
             <div class = "product-imgs">
@@ -31,7 +31,7 @@
                     </a>
                   </div>
                   @php
-                  $counter++;
+                    $counter++;
                   @endphp
                 @endforeach
               </div>
