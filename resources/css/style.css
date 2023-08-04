@@ -1,3 +1,11 @@
+/* Import Google font - Poppins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 /* INIZIO NAVBAR */
 .nav-custom{
   background-color: #005555;
@@ -263,14 +271,7 @@ body{
 .service-item-category:hover .btn {
   width: 190px;
 } */
-/* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+
 .wrapper__category {
   width: 100%;
   position: relative;
@@ -711,12 +712,6 @@ body{
 /* FINE FORM CON IMMAGINI */
 
 /* INIZIO FOOTER*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 .pt-custom{
   justify-content: flex-end;
@@ -927,12 +922,7 @@ color: black;
 
 /*FINE BUTTON MAIL*/
 /* Carousel dettaglio */
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
+
 body{
   line-height: 1.5;
 }
