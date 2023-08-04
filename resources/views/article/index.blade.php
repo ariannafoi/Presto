@@ -9,8 +9,8 @@
         </div>
     </div>
 
-    {{-- <div class="container-fluid w-100">
-        <div class="row justify-content-center h-100">
+        <div class="container w-100">
+            {{-- <div class="row justify-content-center h-100">
            <div class="col-12 p-0">
             <form class="d-flex" method="GET" action="{{route('article.search')}}">
                 <input type="text" placeholder="{{__('ui.searchHere')}}" name="searched">
