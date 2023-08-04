@@ -16,12 +16,12 @@
                     <div class="login__inputs">
                         <div>
                             <label class="login__label">Username</label>
-                            <input type="name" placeholder="Inserisci il tuo username" required class="login__input" name="name">
+                            <input type="name" placeholder="{{__('ui.writeUsername')}}" required class="login__input" name="name">
                             @error('name') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                         </div>
                         <div>
                             <label class="login__label">Email</label>
-                            <input type="email" placeholder="Inserisci la tua email" required class="login__input"name="email">
+                            <input type="email" placeholder="{{__('ui.writeEmail')}}" required class="login__input"name="email">
                             @error('email') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                         </div>
 
@@ -29,7 +29,7 @@
                             <label class="login__label">Password</label>
 
                             <div class="login__box">
-                                <input type="password" placeholder="Inserisci la tua password" required class="login__input" id="input-pass" name="password">
+                                <input type="password" placeholder="{{__('ui.writePassword')}}" required class="login__input" id="input-pass" name="password">
                                 <i class="ri-eye-off-line login__eye" id="input-icon"></i>
                                 @error('password') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                             </div>
@@ -38,7 +38,7 @@
                             <label class="login__label">{{__('ui.confirmationPassword')}}</label>
 
                             <div class="login__box">
-                                <input type="password" placeholder="Inserisci nuovamente la tua password" required class="login__input" id="input-pass" name="password_confirmation">
+                                <input type="password" placeholder="{{__('ui.writePasswordAgain')}}" required class="login__input" id="input-pass" name="password_confirmation">
                                 <i class="ri-eye-off-line login__eye" id="input-icon"></i>
                                 @error('password_confirmation') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                             </div>

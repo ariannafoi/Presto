@@ -3,8 +3,16 @@
 return [
 
     // HOME
-    'latestArticles' => "Ecco gli ultimi annunci inseriti:",
+    'latestArticles' => "Gli ultimi annunci inseriti",
     'subtitleHeader' => "La risposta rapida ai tuoi bisogni",
+    'allCategories' => 'Tutte le categorie', 
+
+    // Placeholders
+    'searchHere' => 'Cerca qui i tuoi prodotti',
+    'writeEmail' => 'Inserisci la tua email',
+    'writePassword' => 'Inserisci la tua password',
+    'writeUsername' => 'Inserisci il tuo username',
+    'writePasswordAgain' => 'Inserisci nuovamente la tua password',
 
     // NAVBAR
     'access' => 'Accedi',

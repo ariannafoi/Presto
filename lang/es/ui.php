@@ -3,8 +3,17 @@
 return [
 
     // HOME
-    'latestArticles' => "Estos son los anuncios publicados:",
+    'latestArticles' => "Los últimos anuncios publicados",
     'subtitleHeader' => "La rápida respuesta a tus necesidades",
+    'allCategories' => 'Todas las categorias', 
+
+    // Placeholders
+    'searchHere' => 'Buscar un producto',
+    'writeEmail' => 'Introduzca su e-mail',
+    'writePassword' => 'Introduzca su password',
+    'writeUsername' => 'Introduzca su username',
+    'writePasswordAgain' => 'Vuelva a introducir su password',
+
     'access' => 'Acceso',
     'register' => 'Iniciar sesión',
     'categories' => 'Categorías',

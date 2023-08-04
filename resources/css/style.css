@@ -227,51 +227,6 @@ body{
 
 /*SEZIONE CATEGORIE*/
 
-/* .service-item-category .bg-img-category {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: -1;
-}
-
-.icon-category{
-  width: 150px;
-  height: 150px;
-}
-.service-item-category .service-text-category {
-  background: #F8F8F8;
-  transition: .5s;
-}
-
-.service-item-category:hover .service-text-category {
-  background: rgba(0, 0, 0, .2);
-}
-
-.service-item-category * {
-  transition: .5;
-}
-
-.service-item-category:hover * {
-  color: #FFFFFF;
-}
-
-.service-item-category .btn {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  color: var(--dark);
-  background: #FFFFFF;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: .5s;
-}
-
-.service-item-category:hover .btn {
-  width: 190px;
-} */
-
 .wrapper__category {
   width: 100%;
   position: relative;

@@ -4,7 +4,16 @@ return [
 
     // HOME
     'latestArticles' => "Our latest articles",
-    'subtitleHeader' => "The fast response to your needs",
+    'subtitleHeader' => "The fastest response to your needs",
+    'allCategories' => 'All our categories', 
+
+    // Placeholders
+    'searchHere' => 'Search a product',
+    'writeEmail' => 'Insert email',
+    'writePassword' => 'Insert password',
+    'writeUsername' => 'Insert username',
+    'writePasswordAgain' => 'Insert your password again',
+
     'access' => 'Login',
     'register' => 'Register',
     'revisorZone' => 'Revisor zone',
