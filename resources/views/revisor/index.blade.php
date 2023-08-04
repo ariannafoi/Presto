@@ -3,12 +3,12 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
               <div class="col-12 text-center">
-                  <h1 class="display-1 font-titolo py-4">{{$article_to_check ? __('ui.articleRevision') : __('ui.noAnnouncementRevisor')}}</h1>
+                  <h1 class="display-1 font-titolo">{{$article_to_check ? __('ui.articleRevision') : __('ui.noAnnouncementRevisor')}}</h1>
               </div>
           </div>
       </div>
       @if ($article_to_check)
-        <div class = "card-wrapper-detail mt-2">
+        <div class = "card-wrapper-detail mt-3">
           <div class = "card">
             <!-- card left -->
             <div class = "product-imgs">
@@ -28,7 +28,7 @@
                 @foreach ($article_to_check->images as $image)
                   <div class = "img-item">
                     <a href = "#" data-id = "{{$counter}}">
-                      <img src = "{{$image->getUrl(400,300)}}" alt = "shoe image">
+                      <img src = "{{$image->getUrl(400,300)}}">
                     </a>
                   </div>
                   @php
@@ -41,24 +41,19 @@
               
             @endif
             <!-- card right -->
-            <div class = "product-content text-center">
+            <div class = "product-content">
               <h2 class = "product-title">{{__('ui.title')}}: {{$article_to_check->title}}</h2>
               
     
     
               <div class = "product-price">
-                
                 <p class = "new-price">{{__('ui.price')}}: {{$article_to_check->price}} €</p>
               </div>
     
               <div class = "product-detail">
-               
                 <p>{{__('ui.description')}}: {{$article_to_check->body}}</p>
-                
-                <a href="{{route('categoryShow' , ['category' => $article_to_check->category])}}" class="btn btn-success">{{__('ui.category')}}: {{$article_to_check->category->name}}</a>
-    
+                <p>{{__('ui.category')}}: <a href="{{route('categoryShow', ['category' => $article_to_check->category])}}" class="a-color">{{$article_to_check->category->name}}</a></p>
                 <p >{{__('ui.publish')}} {{$article_to_check->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article_to_check->user->name ?? ''}}</p>
-              
               </div>
               
               
@@ -77,7 +72,7 @@
                       <span>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></span>
                     </div>
                   </div>
-                  <div class="col-12 text-center pt-5">
+                  <div class="col-12 text-center pt-3">
                     @if ($image->labels)
                       @foreach ($image->labels as $label)
                           <p class="d-inline">#{{$label}}</p>

@@ -27,7 +27,7 @@
                 @foreach ($article->images as $image)
                   <div class = "img-item">
                     <a href = "#" data-id = "{{$counter}}">
-                      <img src = "{{$image->getUrl(400,300)}}" alt = "shoe image">
+                      <img src = "{{$image->getUrl(400,300)}}">
                     </a>
                   </div>
                   @php
@@ -49,7 +49,10 @@
     
               <div class = "product-detail">
                 <p>{{__('ui.description')}}: {{$article->body}}</p>
-                <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">{{__('ui.category')}} : {{$article->category->name}}</a>
+                <p>
+                  {{__('ui.category')}}: <a href="{{route('categoryShow', ['category' => $article->category])}}" class="a-color">{{$article->category->name}}</a>
+                </p>
+
                 <p >{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
               </div>
 
