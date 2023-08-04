@@ -42,7 +42,7 @@
             @endif
             <!-- card right -->
             <div class = "product-content">
-              <h2 class = "product-title">{{__('ui.title')}}: {{$article_to_check->title}}</h2>
+              <h2 class = "product-title"> {{$article_to_check->title}}</h2>
               
     
     
@@ -85,18 +85,19 @@
 
               <div class="container pt-5">
                 <div class="row text-center">
-                        <div class="col-12 col-md-6 pb-2">
+    
+                        <div class="col-6 pb-2 icon-custom">
                             <form action="{{route('revisor.accept_article',['article'=>$article_to_check])}}"method='POST'>
                             @csrf
                             @method('PATCH')
-                            <button type="submit"class="btn btn-success shadow">{{__('ui.accept')}}</button>
+                            <button type="submit"class="btn"><i class="fa-regular fa-circle-check fa-4x" style="color: #005555;"></i></button>
                             </form>
                         </div>
-                        <div class="col-12 col-md-6 pb-2">
+                        <div class="col-6 pb-2 icon-custom">
                             <form action="{{route('revisor.reject_article',['article'=>$article_to_check])}}"method='POST'>
                             @csrf
                             @method('PATCH')
-                            <button type="submit"class="btn btn-danger shadow">{{__('ui.refuse')}}</button>
+                            <button type="submit" class="btn"><i class="fa-regular fa-circle-xmark fa-4x" style="color: #d40c0c;"></i></button>
                             </form>
                         </div>  
                     </div>

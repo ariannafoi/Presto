@@ -68,7 +68,7 @@
                   <form action="" method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger">Elimina</button>
+                    <button type="submit" class="btn btn-danger">Elimina Articolo</button>
                   </form>
                 @endif
               </div>

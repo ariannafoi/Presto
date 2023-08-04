@@ -358,7 +358,8 @@ body{
   }
 
   .text-ultimi-annunci{
-    font-size: 30px;
+    font-size: 50px;
+    word-wrap: normal;
   }
 
 }
@@ -371,6 +372,26 @@ body{
 /* FINE ULTIMI ANNUNCI */
 
 /* INIZIO SEZIONE ANNUNCI */
+
+.search-btn-custom{
+
+  background-color: #005555;
+  color: white;
+  border: 1px solid #005555;
+  border-radius: 10%;
+  height: 40px;
+  
+}
+
+.search-btn-custom:hover{
+  background-color: #005555;
+  color: white;
+  border: 1px solid #ffffff;
+  border-radius: 10%;
+  height: 40px;
+
+}
+
 
 .form-check-input{
   border-radius: 0px;
@@ -895,9 +916,6 @@ color: black;
 
 /* Carousel dettaglio */
 
-/* .paginate-custom{
-  border: 1px solid black;
-} */
 .paginate-custom{
   display: flex;
   justify-content: end;
@@ -911,6 +929,16 @@ color: black;
   
 }
 
+/* REVISOR PAGE */
+@media screen and (max-width: 1023px){
+  .icon-custom{
+    /* display: flex;
+    justify-content: center; */
+  }
+  .filtro-categoria-custom{
+    display: none;
+  }
+}
 
 *{
   box-sizing: border-box;
