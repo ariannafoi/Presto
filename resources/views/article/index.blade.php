@@ -18,7 +18,7 @@
               </form>
         </div> --}}
         @forelse ($articles as $article)
-     <div class="col-12 col-sm-4 col-xxl-3 text-center my-4 d-flex justify-content-center">
+     <div class="col-12 text-center my-4 d-flex justify-content-center">
                 <x-card 
                 :article="$article"
 
