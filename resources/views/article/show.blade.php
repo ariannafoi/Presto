@@ -42,30 +42,32 @@
             <!-- card right -->
             <div class = "product-content">
               <h2 class = "product-title">{{__('ui.title')}}: {{$article->title}}</h2>
-              
-    
-    
+          
               <div class = "product-price">
-                
                 <p class = "new-price">{{__('ui.price')}}: {{$article->price}} €</p>
               </div>
     
               <div class = "product-detail">
-               
                 <p>{{__('ui.description')}}: {{$article->body}}</p>
-                
                 <a href="{{route('categoryShow' , ['category' => $article->category])}}" class="btn btn-success">{{__('ui.category')}} : {{$article->category->name}}</a>
-    
                 <p >{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
-              
               </div>
-    
-              <div class = "purchase-info d-flex">
-                <input type = "number" min = "0" value = "1">
-                <button type = "button" class = "btn">
-                  {{__('ui.cart')}}<i class = "fas fa-shopping-cart ps-2"></i>
+
+              <div class="purchase-info d-flex">
+                <input type="number" min="0" value="1">
+                <button type="button" class="btn">
+                  {{__('ui.cart')}}<i class="fas fa-shopping-cart ps-2"></i>
                 </button>
-                
+              </div>
+
+              <div>
+                @if(Auth::user()->name == $article->user->name)
+                  <form action="" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger">Elimina</button>
+                  </form>
+                @endif
               </div>
     
               <div class = "social-links ">

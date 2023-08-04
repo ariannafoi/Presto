@@ -21,6 +21,7 @@ Route::get('/crea', [ArticleController::class, 'create'])->middleware('auth')->n
 Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 
 Route::get('/dettaglio/annuncio/{article}', [ArticleController::class, 'show'])->middleware('auth')->name('article.show');
+Route::delete('/dettaglio/annuncio/{article}' , [ArticleController::class, 'destroy'])->name('article.delete');
 
 Route::get('/tutti/annunci', [ArticleController::class, 'index'])->name('article.index');
 
