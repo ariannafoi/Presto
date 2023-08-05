@@ -1,12 +1,10 @@
-/* FONT SITO */
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
+/* Import Google font - Poppins */
+/* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-} 
-
+} */
 
 /* INIZIO NAVBAR */
 .nav-custom{
@@ -19,6 +17,7 @@
 .navbar-logo{
   width: 130px;
   height: 70px;
+
 }
 .space-custom{
   padding-top: 100px ;
@@ -80,7 +79,7 @@ body{
   background-position: center;
   width: 100%;
   height: 100vh;
-  animation: slide 25s ease-in-out infinite;
+  animation: slide 20s ease-in-out infinite;
   margin: 0px;
   padding: 0px;
 }
@@ -97,20 +96,21 @@ body{
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   text-align: center;
 }
 
 .principal h1{
-  font-size: 80px;
+  font-size: 100px;
   margin-bottom: 20px;
 }
 
 .principal p{
-  font-size: 30px;
+  font-size: 45px;
 }
 
 /*INIZIO SEARCHBAR*/
+
 .container-sb{
   width: 100%;
   background: #ffffff;
@@ -127,7 +127,6 @@ body{
  height: 55px;
  display: flex;
  border-radius: 50px;
- object-fit: contain;
 }
 
 .input-sb{
@@ -156,16 +155,15 @@ body{
   background-color: white;
   border: none;
 }
-/*FINE SEARCHBAR*/
 
+/*FINE INIZIO SEARCHBAR*/
 
-/* IMMAGINI CHE SCORRONO HEADER */
 @keyframes slide{
   0%,100%{
-    background-image: url(/public/img/tech.jpg);
+      background-image: url(/public/img/abbigliamento.jpg);
   }
   20%{
-    background-image: url(/public/img/abbigliamento.jpg);
+      background-image: url(/public/img/tech.jpg);
   }
   40%{
       background-image: url(/public/img/arredamento1.jpg);
@@ -177,24 +175,25 @@ body{
       background-image: url(/public/img/giochi.jpg);
   }
 }
-/* MEDIA QUERY*/
-@media screen and (max-width:349px){ 
-  .principal{
-    width: 300px;
-  }
+
+@media screen and
+(max-width:349px){
+  .slider-custom{
+      width: 100%;
+    }
   .principal h1{
       font-size:  33px;
   }
   .principal p{
       font-size: 13px;
   }
+} 
+
+
+@media screen and (min-width:350px) and (max-width:767px){
   .slider-custom{
     width: 100%;
   }
-} 
-
-@media screen and (min-width:350px) and (max-width:767px){
-
   .btn-sb{
       padding: 4px 25px;
   }
@@ -202,30 +201,29 @@ body{
     padding: 9px 10px;
   }
   .principal h1{
-      font-size: 38px;
+      font-size: 40px;
   }
   .principal p{
-      font-size: 17px;
+      font-size: 25px;
   }   
-  .slider-custom{
-    width: 100%;
-  }
 }
+
+
 @media screen and (min-width:768px) and
 (max-width:1023px){
+  .slider-custom{
+      width: 100%;
+    }
   .principal h1{
-      font-size:  45px;
+      font-size:  58px;
   }
   .principal p{
-      font-size: 15px;
-  }
-  .slider-custom{
-    width: 100%;
+      font-size: 30px;
   }
 } 
+
+
 /* FINE HEADER */
-
-
 
 /*SEZIONE CATEGORIE*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
@@ -376,9 +374,10 @@ body{
 } 
 /* FINE ULTIMI ANNUNCI */
 
-
 /* INIZIO SEZIONE ANNUNCI */
+
 .search-btn-custom{
+
   background-color: #005555;
   color: white;
   border: 1px solid #005555;
@@ -393,12 +392,13 @@ body{
   border: 1px solid #ffffff;
   border-radius: 10%;
   height: 40px;
+
 }
+
 
 .form-check-input{
   border-radius: 0px;
 }
-
 .crea-custom{
   background-color: #008e8e;
   border: none;
@@ -408,10 +408,12 @@ body{
   background-color: #000;
   color: #008e8e;
 }
+
 /* FINE SEZIONE ANNUNCI */
 
 
-/*INIZIO FORM LOGIN e FORM REGISTER*/
+/*INIZIO FORM LOGIN-REGISTER*/
+
 :root {
 
   --first-color: #005555;
@@ -463,6 +465,15 @@ body{
   padding: 2rem;
   border-radius: 45px;
 }
+.login__form__cst{
+  background-color: rgba(232, 231, 238, 0.6);
+  border: 2px solid hsla(244, 16%, 92%, 0.75);
+  margin-inline: 1.5rem;
+  row-gap: 0.75rem;
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  border-radius: 45px;
+}
 .login__title {
   color: var(--title-color);
   font-size: var(--h2-font-size);
@@ -480,7 +491,7 @@ body{
 }
 .login__label {
   display: block;
-  color: #005555;
+  color: var(--title-color);
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 0.25rem;
@@ -584,74 +595,129 @@ body{
 }
 
 
-@media screen and (max-width:1023px) {
+@media screen and (min-width: 360px) and (max-width:599px) {
   .login__content{
     margin-top: 10%;
     height: 100%;
   }
+
   .login__form{
     height: 550px;
-    background-color: rgba(0, 85, 85, 0.3);
-    border: none;
   }
+  .login__form__cst{
 
-  .login__label {
-    display: block;
-    font-size: var(--small-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: 0.25rem;
+    height: 480px;
+    background-color: rgba(0, 85, 85, 0.90);
+    border: none;
   }
   .login__buttons {
     flex-direction: column;
   }
   .login__img{
+    height: 580px;
+    border-radius: 10%;
     display: none;
   }
 }
 
+@media screen and (min-width: 600px) {
+  .container-lr-custom {
+    display: grid;
+    place-items: center;
+  }
+  .login__content {
+    height: 600px;
+  }
+  .login__img{
+    height: 600px;
+    border-radius: 10%;
+  }
+  .login__form {
+    height: 570px;
+    width: 550px;
+    justify-self: center;
+  }
+  .login__form__cst{
+    height: 650px;
+    width: 550px;
+    justify-self: center;
+  }
+}
 
-@media screen and (min-width: 1024px) and (max-width:1399px) {
+@media screen and (min-width: 1250px) {
   .container-lr-custom {
     min-height: 85vh;
     display: grid;
     place-items: center;
   }
-  .login__img {
-    width: 100%;
-    border-radius: 3.5rem;
-    box-shadow: 24px 0px 48px #00555565;
-  }
   .login__content {
     height: 700px;
     width: 1000px;
+  }
+  .login__img {
+    width: 100%;
+    border-radius: 3.5rem;
+    box-shadow: 0 24px 48px hsla(244, 75%, 36%, 0.45);
   }
   .login__form {
     justify-self: flex-end;
     margin-right: 4.5rem;
     width: 600px;
   }
- 
+  .login__form__cst{
+    justify-self: flex-end;
+    margin-right: 4.5rem;
+    width: 600px;
+  }
 }
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1300px) {
   .container-lr-custom {
     min-height: 88vh;
     display: grid;
     place-items: center;
   }
   .login__img{
-    border-radius: 3.5rem;
-    box-shadow: 24px 0px 48px #00555565;
+    width: 100%;
+    height: 100%;
   }
   .login__content {
     height: 820px;
     width: 1200px;
   }
   .login__form {
-    justify-self: flex-end;
-    margin-right: 4.5rem;
-    width: 600px;
+    row-gap: 0.01rem;
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    border: 2.5px solid hsla(244, 16%, 92%, 0.75);
   }
-
+  .login__form__cst{
+    row-gap: 0.01rem;
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    border: 2.5px solid hsla(244, 16%, 92%, 0.75);
+  }
+  .login__description, .login__label, .login__button {
+    font-size: var(--normal-font-size);
+  }
+  .login__inputs {
+    row-gap: 0.5rem;
+    margin-bottom: 1.3rem;
+  }
+  .login__input {
+    border: 2.5px solid var(--text-color);
+    padding: 1rem;
+    font-size: var(--small-font-size);
+  }
+  .login__input:focus, .login__input:valid {
+    border: 2.5px solid var(--first-color);
+  }
+  .login__button {
+    padding-block: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .login__button-ghost {
+    border: 2.5px solid var(--first-color);
+  }
 }
 
 /*FINE FORM LOGIN-REGISTER*/
@@ -668,6 +734,12 @@ body{
 /* FINE FORM CON IMMAGINI */
 
 /* INIZIO FOOTER*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
 .pt-custom{
   justify-content: flex-end;
@@ -898,12 +970,21 @@ color: black;
 
 /* REVISOR PAGE */
 @media screen and (max-width: 1023px){
-
+  .icon-custom{
+    /* display: flex;
+    justify-content: center; */
+  }
   .filtro-categoria-custom{
     display: none;
   }
 }
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
 
 body{
   line-height: 1.5;
@@ -1102,7 +1183,3 @@ img{
   }
 }
 /* Fine carousel dettaglio */
-
-/* INIZIO MODAL*/
-
-/*FINE MODAL*/
