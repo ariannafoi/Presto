@@ -198,10 +198,10 @@ body{
     padding: 9px 10px;
   }
   .principal h1{
-      font-size: 40px;
+      font-size: 38px;
   }
   .principal p{
-      font-size: 25px;
+      font-size: 17px;
   }   
   .slider-custom{
     width: 100%;
@@ -210,10 +210,10 @@ body{
 @media screen and (min-width:768px) and
 (max-width:1023px){
   .principal h1{
-      font-size:  58px;
+      font-size:  50px;
   }
   .principal p{
-      font-size: 30px;
+      font-size: 25px;
   }
   .slider-custom{
     width: 100%;
