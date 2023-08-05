@@ -1,4 +1,4 @@
-<div class="container pt-5 mt-5">
+<div class="container pt-5 mt-5 px-4">
     <div class="row justify-content-center d-flex">
         <div class="wrapper__category">
             <i id="left" class="fa-solid fa-angle-left"></i>
