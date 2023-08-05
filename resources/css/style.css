@@ -576,7 +576,7 @@ img{
   text-decoration: none;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (min-width: 360px) and (max-width:599px) {
   .login__content{
     margin-top: 10%;
     height: 100%;
