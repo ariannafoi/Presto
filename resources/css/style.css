@@ -1,26 +1,4 @@
 /* FONT SITO*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  list-style-type: none;
-}
-
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1.5;
-}
-
-img{
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
 
 :root {
 
@@ -1148,3 +1126,26 @@ color: black;
   }
 }
 /* Fine carousel dettaglio */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+img{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
