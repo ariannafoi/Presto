@@ -955,6 +955,17 @@ color: black;
   }
 }
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  line-height: 1.5;
+}
+
 .card{
   border-radius: 10px;
   background-color: #f2f3f6;
@@ -963,6 +974,11 @@ color: black;
 .card-wrapper-detail{
   max-width: 1000px;
   margin: 0 auto;
+}
+img{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
 }
 .img-display{
   overflow: hidden;
