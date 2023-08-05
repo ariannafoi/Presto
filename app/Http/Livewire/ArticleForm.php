@@ -5,11 +5,11 @@ namespace App\Http\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
-use App\Jobs\RemoveFaces;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 

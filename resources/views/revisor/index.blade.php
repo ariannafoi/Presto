@@ -16,7 +16,7 @@
               <div class = "img-display">
                 <div class = "img-showcase">
                   @foreach ($article_to_check->images as $image)
-                    <img src="{{$image->getUrl(400,300)}}" class="" alt="...">
+                  <img src="{{$image->getUrl(400,300)}}" class="" alt="...">
                   @endforeach 
                 </div>
               </div>
@@ -64,12 +64,13 @@
                   <div class="col-12">
                     <div class="product-detail text-center">
                       <h4 class="tc-accent pb-3">Revisione Immagini</h4>
-                      <span>Adulti: <span class="{{$image->adult}}"></span></span>
-                      <span>Satira: <span class="{{$image->spoof}}"></span></span>
-                      <span>Medicina: <span class="{{$image->medical}}"></span></span>
-                      <span>Violenza: <span class="{{$image->violence}}"></span></span>
-                      <br>
-                      <span>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></span>
+                      @if(!empty($image))
+                        <span>Adulti: <span class="{{$image->adult}}"></span></span>
+                        <span>Satira: <span class="{{$image->spoof}}"></span></span>
+                        <span>Medicina: <span class="{{$image->medical}}"></span></span>
+                        <span>Violenza: <span class="{{$image->violence}}"></span></span>
+                        <br>
+                        <span>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></span>
                     </div>
                   </div>
                   <div class="col-12 text-center pt-3">
@@ -78,6 +79,7 @@
                           <p class="d-inline">#{{$label}}</p>
                       @endforeach
                     @endif
+                      @endif
                   </div>
                 </div>
               </div>

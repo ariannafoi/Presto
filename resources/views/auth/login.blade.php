@@ -3,9 +3,9 @@
 
     <div class="container-lr-custom">
         <div class="login__content">
-            <img src="img/bg-form1.jpg" alt="login image" class="login__img">
+            <img src="img/bg-form5.jpg" alt="login image" class="login__img">
 
-            <form class="login__form" method="post" action="{{route('login')}}">
+            <form class="login__form__cst" method="post" action="{{route('login')}}">
                 @csrf
                 <div>
                     <h1 class="login__title">
