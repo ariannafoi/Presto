@@ -1,19 +1,16 @@
-<section class="modal container" id="alertSuccess">
-
-    <div class="modal__container" id="modal-container">
-        <div class="modal__content">
-            <div class="modal__close close-modal" title="Close">
-                <i class='bx bx-x'></i>
+<div class="modal fade" id="alertSuccess" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-success">
+                <button type="button" class="btn-close btn-close-alert" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="content-icon content-icon-s">
+                    <i class="fa-solid fa-check"></i>
+                </div>
             </div>
-
-                <img src="spunta.jpg" alt="" class="modal__img">
-
-            <h1 class="modal__title">{{__('ui.operationOk')}}</h1>
-
-            <button class="modal__button modal__button-width">
-                {{__('ui.returnHome')}}
-            </button>
-
+            <div class="modal-body">
+                <h1 class="modal-title modal-title-success">{{__('ui.success')}}</h1>
+                <p class="modal-message">{{session('messaggio')}}</p>
+            </div>
         </div>
     </div>
-</section>
+</div>

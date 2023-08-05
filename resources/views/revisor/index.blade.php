@@ -11,7 +11,7 @@
         <div class = "card-wrapper-detail mt-3">
           <div class = "card">
             <!-- card left -->
-            <div class = "product-imgs">
+            <div class = "product-imgs px-4">
               @if (count($article_to_check->images))  
               <div class = "img-display">
                 <div class = "img-showcase">
