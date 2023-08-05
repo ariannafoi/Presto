@@ -68,12 +68,8 @@
           </li>         
           <li class="nav-item">
             <a class="nav-link n-custom" href="{{route('create')}}">{{__('ui.createAnnouncement')}}</a>
-          </li>
-
-          
-          
-        </ul>
-        
+          </li>      
+        </ul>       
       </div>
     </div>
   </nav>
