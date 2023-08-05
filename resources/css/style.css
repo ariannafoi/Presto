@@ -1,10 +1,12 @@
-/* Import Google font - Poppins */
-/* {
+/* FONT SITO */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-} */
+}
+
 
 /* INIZIO NAVBAR */
 .nav-custom{
@@ -17,7 +19,6 @@
 .navbar-logo{
   width: 130px;
   height: 70px;
-
 }
 .space-custom{
   padding-top: 100px ;
@@ -110,7 +111,6 @@ body{
 }
 
 /*INIZIO SEARCHBAR*/
-
 .container-sb{
   width: 100%;
   background: #ffffff;
@@ -155,9 +155,10 @@ body{
   background-color: white;
   border: none;
 }
+/*FINE SEARCHBAR*/
 
-/*FINE INIZIO SEARCHBAR*/
 
+/* IMMAGINI CHE SCORRONO HEADER */
 @keyframes slide{
   0%,100%{
       background-image: url(/public/img/abbigliamento.jpg);
@@ -175,12 +176,8 @@ body{
       background-image: url(/public/img/giochi.jpg);
   }
 }
-
-@media screen and
-(max-width:349px){
-  .slider-custom{
-      width: 100%;
-    }
+/* MEDIA QUERY*/
+@media screen and (max-width:349px){ 
   .principal h1{
       font-size:  33px;
   }
@@ -189,11 +186,8 @@ body{
   }
 } 
 
-
 @media screen and (min-width:350px) and (max-width:767px){
-  .slider-custom{
-    width: 100%;
-  }
+  
   .btn-sb{
       padding: 4px 25px;
   }
@@ -207,13 +201,8 @@ body{
       font-size: 25px;
   }   
 }
-
-
 @media screen and (min-width:768px) and
 (max-width:1023px){
-  .slider-custom{
-      width: 100%;
-    }
   .principal h1{
       font-size:  58px;
   }
@@ -221,18 +210,11 @@ body{
       font-size: 30px;
   }
 } 
-
-
 /* FINE HEADER */
 
+
+
 /*SEZIONE CATEGORIE*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 .wrapper__category {
   width: 100%;
@@ -374,10 +356,9 @@ body{
 } 
 /* FINE ULTIMI ANNUNCI */
 
+
 /* INIZIO SEZIONE ANNUNCI */
-
 .search-btn-custom{
-
   background-color: #005555;
   color: white;
   border: 1px solid #005555;
@@ -392,13 +373,12 @@ body{
   border: 1px solid #ffffff;
   border-radius: 10%;
   height: 40px;
-
 }
-
 
 .form-check-input{
   border-radius: 0px;
 }
+
 .crea-custom{
   background-color: #008e8e;
   border: none;
@@ -408,12 +388,10 @@ body{
   background-color: #000;
   color: #008e8e;
 }
-
 /* FINE SEZIONE ANNUNCI */
 
 
-/*INIZIO FORM LOGIN-REGISTER*/
-
+/*INIZIO FORM LOGIN e FORM REGISTER*/
 :root {
 
   --first-color: #005555;
@@ -472,7 +450,7 @@ body{
   row-gap: 0.75rem;
   backdrop-filter: blur(20px);
   padding: 1.5rem;
-  border-radius: 45px;
+  border-radius: 30px;
 }
 .login__title {
   color: var(--title-color);
@@ -491,7 +469,7 @@ body{
 }
 .login__label {
   display: block;
-  color: var(--title-color);
+  color: #005555;
   font-size: var(--small-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: 0.25rem;
@@ -603,13 +581,21 @@ body{
 
   .login__form{
     height: 550px;
-  }
-  .login__form__cst{
-
-    height: 480px;
     background-color: rgba(0, 85, 85, 0.90);
     border: none;
   }
+  .login__title span {
+    color: white;
+  }
+  .login__label {
+    display: block;
+    color: white;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 0.25rem;
+  }
+
+
   .login__buttons {
     flex-direction: column;
   }
@@ -734,12 +720,6 @@ body{
 /* FINE FORM CON IMMAGINI */
 
 /* INIZIO FOOTER*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 .pt-custom{
   justify-content: flex-end;
@@ -979,12 +959,6 @@ color: black;
   }
 }
 
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-}
 
 body{
   line-height: 1.5;
