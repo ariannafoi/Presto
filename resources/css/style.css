@@ -102,12 +102,12 @@ body{
 }
 
 .principal h1{
-  font-size: 80px;
+  font-size: 100px;
   margin-bottom: 20px;
 }
 
 .principal p{
-  font-size: 30px;
+  font-size: 45px;
 }
 
 /*INIZIO SEARCHBAR*/
@@ -215,6 +215,13 @@ body{
 
 
 /*SEZIONE CATEGORIE*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
 .wrapper__category {
   width: 100%;
