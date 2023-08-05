@@ -9,15 +9,15 @@
 
             <div class="container w-100">
                 <div class="row">
-                    <div class="col-12 col-sm-3 col-xl-3 pt-4">
+                    <div class="col-12 col-sm-12 col-xl-3 pt-4">
                         <div class="">
-                            <form class="sb" method="GET" action="{{route('article.search')}}">
+                            <form class="sb form-control" method="GET" action="{{route('article.search')}}">
                                 <input type="text" placeholder="{{__('ui.searchHere')}}" class="input-sb" name="searched">
-                                <button type="submit" class="search-btn-custom"><i class="fa-solid fa-magnifying-glass fa-search" style="color: #ffffff;"></i></button>
+                                <button type="submit" class="btn-custom-bar"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #005555;"></i></button>
                             </form>
                         </div>
                         <div class="filtro-categoria-custom">
-                            <p class="my-3 ">Filtra per categoria</p>
+                            <p class="my-3 text-center py-2">Filtra per categoria</p>
                             @foreach ($categories as $category)
                                 <div class="form-check mt-3">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -28,7 +28,7 @@
                             @endforeach
                         </div>
                     </div>
-                <div class="col-12 col-sm-9 col-xl-9">
+                <div class="col-12 col-sm-12 col-xl-9">
                     <div class="row">
             @forelse ($articles as $article)
                     <div class="col-12 col-sm-6 col-xl-4 text-center my-4 d-flex justify-content-center">
@@ -37,8 +37,8 @@
                         />
                     </div>
                 @empty
-                    <div class="col-12">
-                        <div class="alert alert-warning py-3 shadow">
+                    <div class="col-12 my-4">
+                        <div class="alert alert-warning py-2 shadow">
                             <p class="lead">{{__('ui.empty')}}</p>
                         </div>
                     </div>

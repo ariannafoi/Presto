@@ -144,13 +144,11 @@ body{
   letter-spacing: 1px;
   cursor: pointer;
   border-radius: 50px;
-
 }
 
-.fa-search{
-  align-self: center;
-  padding: 10px 20px;
-  color: #777;
+.btn-custom-bar{
+  background-color: white;
+  border: none;
 }
 
 /*FINE INIZIO SEARCHBAR*/
