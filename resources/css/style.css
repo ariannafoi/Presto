@@ -1,22 +1,10 @@
-/* FONT SITO*/
-
-:root {
-
-  --first-color: #005555;
-  --second-color: #005555;
-  --title-color: hsl(244, 12%, 12%);
-  --text-color: hsl(244, 4%, 36%);
-  --body-color: hsl(208, 97%, 85%);
-
-
-  --body-font: "Poppins", sans-serif;
-  --h2-font-size: 1.25rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
- 
-  --font-medium: 500;
-  --font-semi-bold: 600;
-}
+/* Import Google font - Poppins */
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+} */
 
 /* INIZIO NAVBAR */
 .nav-custom{
@@ -26,7 +14,6 @@
   width: 100%;
   height: 90px;
 }
-
 .navbar-logo{
   width: 130px;
   height: 70px;
@@ -66,7 +53,21 @@
 
 /* FINE NAVBAR */
 
+
 /* INIZIO HEADER */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .load-custom{
   animation: slide 2s;
@@ -159,19 +160,19 @@
 
 @keyframes slide{
   0%,100%{
-    background-image: url(/public/img/abbigliamento.jpg);
+      background-image: url(/public/img/abbigliamento.jpg);
   }
   20%{
-    background-image: url(/public/img/tech.jpg);
+      background-image: url(/public/img/tech.jpg);
   }
   40%{
-    background-image: url(/public/img/arredamento1.jpg);
+      background-image: url(/public/img/arredamento1.jpg);
   }
   60%{
-    background-image: url(/public/img/musica.jpg);
+      background-image: url(/public/img/musica.jpg);
   }
   80%{
-    background-image: url(/public/img/giochi.jpg);
+      background-image: url(/public/img/giochi.jpg);
   }
 }
 
@@ -187,6 +188,7 @@
       font-size: 13px;
   }
 } 
+
 
 @media screen and (min-width:350px) and (max-width:767px){
   .slider-custom{
@@ -206,6 +208,7 @@
   }   
 }
 
+
 @media screen and (min-width:768px) and
 (max-width:1023px){
   .slider-custom{
@@ -218,6 +221,7 @@
       font-size: 30px;
   }
 } 
+
 
 /* FINE HEADER */
 
@@ -273,6 +277,7 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+
 
 .carousel__category::-webkit-scrollbar {
   display: none;
@@ -367,7 +372,6 @@
   font-size: 60px;
 }
 } 
-
 /* FINE ULTIMI ANNUNCI */
 
 /* INIZIO SEZIONE ANNUNCI */
@@ -381,6 +385,7 @@
   height: 40px;
   
 }
+
 .search-btn-custom:hover{
   background-color: #005555;
   color: white;
@@ -389,6 +394,7 @@
   height: 40px;
 
 }
+
 
 .form-check-input{
   border-radius: 0px;
@@ -405,8 +411,26 @@
 
 /* FINE SEZIONE ANNUNCI */
 
+
 /*INIZIO FORM LOGIN-REGISTER*/
 
+:root {
+
+  --first-color: #005555;
+  --second-color: #005555;
+  --title-color: hsl(244, 12%, 12%);
+  --text-color: hsl(244, 4%, 36%);
+  --body-color: hsl(208, 97%, 85%);
+
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+ 
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
 @media screen and (min-width: 1024px) {
   :root {
     --h2-font-size: 1.75rem;
@@ -415,6 +439,7 @@
     --smaller-font-size: .813rem;
   }
 }
+
 
 .login__content, .login__form, .login__form__cst, .login__inputs {
   display: grid;
@@ -438,11 +463,19 @@
   row-gap: 1.25rem;
   backdrop-filter: blur(20px);
   padding: 2rem;
-  border-radius: 30px;
+  border-radius: 45px;
 }
-
+.login__form__cst{
+  background-color: rgba(232, 231, 238, 0.6);
+  border: 2px solid hsla(244, 16%, 92%, 0.75);
+  margin-inline: 1.5rem;
+  row-gap: 0.75rem;
+  backdrop-filter: blur(20px);
+  padding: 1.5rem;
+  border-radius: 45px;
+}
 .login__title {
-  color: #005555;
+  color: var(--title-color);
   font-size: var(--h2-font-size);
   margin-bottom: 0.5rem;
 }
@@ -561,24 +594,21 @@
   text-decoration: none;
 }
 
+
 @media screen and (min-width: 360px) and (max-width:599px) {
   .login__content{
     margin-top: 10%;
     height: 100%;
   }
+
   .login__form{
     height: 550px;
-    background-color: rgba(0, 85, 85, 0.3);
   }
-  .login-title span{
-    color: white;
-  }
-  .login__label{
-    display:block;
-    color: white;
-    font-size: var(--small-font-size);
-    font-weight: var(--font-semi-bold);
-    margin-bottom: 0.25rem;
+  .login__form__cst{
+
+    height: 480px;
+    background-color: rgba(0, 85, 85, 0.90);
+    border: none;
   }
   .login__buttons {
     flex-direction: column;
@@ -640,7 +670,6 @@
     width: 600px;
   }
 }
-
 @media screen and (min-width: 1300px) {
   .container-lr-custom {
     min-height: 88vh;
@@ -705,6 +734,12 @@
 /* FINE FORM CON IMMAGINI */
 
 /* INIZIO FOOTER*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
 .pt-custom{
   justify-content: flex-end;
@@ -713,7 +748,6 @@
   display: flex;
   margin-top: 130px;
 }
-
 .footer {
   position: relative;
   width: 100%;
@@ -726,7 +760,9 @@
   flex-direction: column;
 }
 
-.social-icon, .menu {
+
+.social-icon,
+.menu {
   position: relative;
   display: flex;
   justify-content: center;
@@ -735,7 +771,8 @@
   flex-wrap: wrap;
 }
 
-.social-icon__item, .menu__item {
+.social-icon__item,
+.menu__item {
   list-style: none;
 }
 
@@ -759,6 +796,7 @@
   text-decoration: none;
   opacity: 0.75;
   font-weight: 300;
+  
 }
 
 .menu__link:hover {
@@ -775,21 +813,24 @@
 
 /* FINE FOOTER*/
 
+
 a{
     text-decoration: none;
 }
 
+
+
 /* INIZIO CARD */
 
 .card-custom {
-  min-width: 190px;
-  min-height: 254px;
-  background: transparent;
-  position: relative;
-  padding: 15px;
-  background: #f2f3f6;
-  transition: 0.5s ease-out;
-  overflow: visible;
+    min-width: 190px;
+    min-height: 254px;
+    background: transparent;
+    position: relative;
+    padding: 15px;
+    background: #f2f3f6;
+    transition: 0.5s ease-out;
+    overflow: visible;
 }
 
 .card-img-custom{
@@ -839,6 +880,7 @@ color: black;
     transition: 0.3s ease-out;
 }
 
+   
 /*Text card*/
 .text-title {
     font-size: 2em;
@@ -852,7 +894,6 @@ color: black;
 }
    
 /*Hover card*/
-
 @media screen and (max-width:1023px){
   .card-custom {
     border-color: #008e8e;
@@ -863,7 +904,6 @@ color: black;
     opacity: 1;
   }
 }
-
 @media screen and (min-width:1024px) {
   .card-custom:hover {
     border-color: #008e8e;
@@ -891,7 +931,6 @@ color: black;
     background-repeat: no-repeat;
     width: 100%;  
 }
-
 /* Fine carousel */
 
 /*BUTTON MAIL*/
@@ -930,12 +969,25 @@ color: black;
 }
 
 /* REVISOR PAGE */
-
 @media screen and (max-width: 1023px){
-
+  .icon-custom{
+    /* display: flex;
+    justify-content: center; */
+  }
   .filtro-categoria-custom{
     display: none;
   }
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  line-height: 1.5;
 }
 
 .card{
@@ -946,6 +998,11 @@ color: black;
 .card-wrapper-detail{
   max-width: 1000px;
   margin: 0 auto;
+}
+img{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
 }
 .img-display{
   overflow: hidden;
@@ -1126,26 +1183,3 @@ color: black;
   }
 }
 /* Fine carousel dettaglio */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  list-style-type: none;
-}
-
-body{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1.5;
-}
-
-img{
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
