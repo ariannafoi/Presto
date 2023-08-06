@@ -1,5 +1,5 @@
 <div>
-                <form wire:submit.prevent="save" >
+                <form wire:submit.prevent="save" class="border__container p-3 mb-4" >
                     @csrf
                     <div class="mb-3">
                       <label class="form-label">{{__('ui.title')}}</label>
@@ -26,29 +26,37 @@
                         </select>
                         @error('category') <div class="error alert alert-danger">{{ $message }}</div> @enderror
                       </div>
-                      <div class="mb-3">
-                        <input type="file" name="images" class="form-control shadow @error('temporary_images.*') is-invalid @enderror" wire:model="temporary_images" multiple>
-                        @error('temporary_images') <p class="error alert alert-danger">{{ $message }}</p> @enderror
-                      </div>
-                      @if (!empty($images))
-                          <div class="row">
-                            <div class="col-12">
-                              <p>
-                                {{__('ui.previewPhoto')}} 
-                              </p>
-                              <div class="row border border-4 border-info rounded shadow py-4 mb-3">
-                                @foreach ($images as $key => $image)
-                                    <div class="col my-3">
-                                      <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
 
-                                      </div>
-                                      <button class="btn btn-danger shadow d-block text-center mt-2 mx-auto" type="button" wire:click="removeImage({{$key}})">{{__('ui.btnCancel')}}</button>
-                                    </div>
-                                @endforeach
-                              </div>
-                            </div>
-                          </div>                        
-                      @endif
-                    <button type="submit" class="btn crea-custom">{{__('ui.createAnnouncementBtn')}}</button>
+
+                      <div class="mb-3">
+                        <label for="images" class="drop-container" id="dropcontainer">
+                          <span class="drop-title">Drop files here</span>
+                          or
+                          <input type="file" name="images" required multiple class="shadow @error('temporary_images.*') is-invalid @enderror" wire:model="temporary_images">
+                          @error('temporary_images') <p class="error alert alert-danger">{{ $message }}</p> @enderror
+                        </label>
+                      </div>
                 </form>
+                
+                @if (!empty($images))
+                <div class="row">
+                  <div class="col-12 text-center">
+                    {{-- <p>
+                      {{__('ui.previewPhoto')}} 
+                    </p> --}}
+                    <div class="row border rounded shadow py-4 mb-3">
+                      @foreach ($images as $key => $image)
+                          <div class="col-6 my-3">
+                            <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});">
+                            </div>
+                            <button class="btn"><i class="fa-regular fa-circle-xmark fa-3x mt-1" style="color: #d40c0c;" type="button" wire:click="removeImage({{$key}})"></i></button>
+                          </div>
+                      @endforeach
+                    </div>
+                  </div>
+                </div>                        
+            @endif
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn crea-custom">{{__('ui.createAnnouncementBtn')}}</button>
+            </div>
 </div>
