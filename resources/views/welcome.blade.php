@@ -57,7 +57,7 @@
                     <div class="container">
                         <div class="row justify-content-center h-100">
                             @foreach ($articles as $article)
-                            <div class="col-12 col-md-6 col-lg-3 text-center card-space mt-5 justify-content-center d-flex" data-aos="fade-down">
+                            <div class="col-12 col-md-6 col-lg-3 text-center card-space mt-5 justify-content-center d-flex" >
                                 <x-card 
                                 :article="$article"
                                 />
@@ -74,9 +74,6 @@
 
     <x-footer></x-footer>
     @livewireScripts
-    <script>
-        AOS.init();
-      </script>
     <script src="https://kit.fontawesome.com/9240e71097.js" crossorigin="anonymous"></script>
 </body>
 </html>
