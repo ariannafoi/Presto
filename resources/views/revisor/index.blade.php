@@ -29,6 +29,7 @@
                   <div class = "img-item">
                     <a href = "#" data-id = "{{$counter}}">
                       <img src = "{{$image->getUrl(400,300)}}">
+                      {{-- {{!$image->get()->isEmpty() ? $image->getUrl(400,300) : '/img/logopresto.png'}} --}}
                     </a>
                   </div>
                   @php

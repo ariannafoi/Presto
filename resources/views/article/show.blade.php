@@ -16,6 +16,7 @@
                 <div class = "img-showcase">
                   @foreach ($article->images as $image)
                     <img src="{{$image->getUrl(400,300)}}" class="" alt="...">
+                    
                   @endforeach
                 </div>
               </div>
