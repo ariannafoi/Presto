@@ -1,4 +1,4 @@
 import './bootstrap';
 import 'bootstrap';
 import './script';
-import 'aos/dist/aos';
+// import 'aos/dist/aos';

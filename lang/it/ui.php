@@ -40,7 +40,6 @@ return [
     'description' => 'Descrizione',
     'price' => 'Prezzo',
     'category' => 'Categoria',
-    'previewPhoto' => 'Anteprima foto',
     'selectCategory' => 'Scegli la categoria',
     'btnCancel'=>'Cancella',
 

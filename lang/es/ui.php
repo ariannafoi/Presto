@@ -24,7 +24,6 @@ return [
     'becomeRevisor' => 'Quiere trabajar con nosotros?',
     'becomeRevisorBtn' => 'Conviértete en revisor',
     'selectCategory' => 'Elige la categoría',
-    'previewPhoto' => 'Vista previa de la foto',
 
     // LOGIN-REGISTER FORM
     'welcomeBack' => 'Bienvenido de nuevo!',
