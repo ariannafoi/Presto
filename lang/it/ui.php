@@ -42,6 +42,7 @@ return [
     'category' => 'Categoria',
     'selectCategory' => 'Scegli la categoria',
     'btnCancel'=>'Cancella',
+    'uploadFiles' => 'Carica qui le immagini',
 
     'createAnnouncementBtn' => 'Crea annuncio',
     'allAnnouncementOf' => 'Tutti gli annunci in ',

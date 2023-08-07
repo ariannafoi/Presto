@@ -31,8 +31,9 @@
 
                         <div class="mb-3">
                           <label for="images" class="drop-container" id="dropcontainer">
-                            <span class="drop-title">Drop files here</span>
-                            or
+                            <span class="drop-title">
+                              {{__('ui.uploadFiles')}}
+                            </span>
                             <input type="file" name="images" multiple class="shadow @error('temporary_images.*') is-invalid @enderror" wire:model="temporary_images">
                             @error('temporary_images') <p class="error alert alert-danger">{{ $message }}</p> @enderror
                           </label>

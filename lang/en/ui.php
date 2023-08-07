@@ -24,6 +24,7 @@ return [
     'becomeRevisor' => 'Do you want to work with us?',
     'becomeRevisorBtn' => 'Become a revisor',
     'selectCategory' => 'Select category',
+    'uploadFiles' => 'Upload images here',
 
     // LOGIN-REGISTER FORM
     'welcomeBack' => 'Welcome back!',
