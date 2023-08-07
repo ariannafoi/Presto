@@ -6,6 +6,7 @@ return [
     'latestArticles' => "Los últimos anuncios publicados",
     'subtitleHeader' => "La rápida respuesta a tus necesidades",
     'allCategories' => 'Todas las categorias', 
+    'search' => 'Buscar',
 
     // Placeholders
     'searchHere' => 'Buscar un producto',

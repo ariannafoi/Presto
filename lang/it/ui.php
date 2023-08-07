@@ -15,6 +15,8 @@ return [
     'writePasswordAgain' => 'Inserisci nuovamente la tua password',
 
     // NAVBAR
+
+    'search' => 'Cerca',
     'access' => 'Accedi',
     'register' => 'Registrati',
     'revisorZone' => 'Zona revisore',

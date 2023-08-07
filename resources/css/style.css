@@ -1097,7 +1097,6 @@ img{
   height: 200px;
   padding: 20px;
   border-radius: 10px;
-  border: 2px dashed #005555;
   color: black;
   cursor: pointer;
   transition: background .2s ease-in-out, border .2s ease-in-out;

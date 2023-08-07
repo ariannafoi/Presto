@@ -6,6 +6,7 @@ return [
     'latestArticles' => "Our latest articles",
     'subtitleHeader' => "The fastest response to your needs",
     'allCategories' => 'All our categories', 
+    'search' => 'Search',
 
     // Placeholders
     'searchHere' => 'Search a product',
