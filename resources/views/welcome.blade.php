@@ -41,12 +41,11 @@
         <div class="row">
             <div class="col-12 space-custom">
                 <div class="">
-
+                                        
                     @if (session()->has('message'))
-                        <div class="alert alert-success message-space">
-                            {{ session('message') }}
-                        </div>
+                        <x-alertSuccessRevisor :message="session('message')"></x-alertSuccessRevisor>
                     @endif
+                    
 
                     @if (session()->has('access-denied'))
                         <div class="alert alert-danger message-space">

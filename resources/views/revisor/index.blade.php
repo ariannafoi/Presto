@@ -16,8 +16,9 @@
               <div class = "img-display">
                 <div class = "img-showcase">
                   @foreach ($article_to_check->images as $image)
-                  <img src="{{$image->getUrl(400,300)}}" class="" alt="...">
-                  @endforeach 
+                    <img src="{{$image->getUrl(400,300)}}" class="" alt="...">
+                  @endforeach
+          
                 </div>
               </div>
               <div class = "img-select">
@@ -29,7 +30,6 @@
                   <div class = "img-item">
                     <a href = "#" data-id = "{{$counter}}">
                       <img src = "{{$image->getUrl(400,300)}}">
-                      {{-- {{!$image->get()->isEmpty() ? $image->getUrl(400,300) : '/img/logopresto.png'}} --}}
                     </a>
                   </div>
                   @php
@@ -38,7 +38,13 @@
                 @endforeach
               </div>
             </div>
-              @else
+            @else
+            <div class = "img-display py-4">
+              <div class = "img-showcase">
+                  <img src="/img/imgDefault.png" class="" alt="...">         
+              </div>
+            </div>
+
               
             @endif
             <!-- card right -->
@@ -110,5 +116,8 @@
         </div>
         
         @endif
+        @if (session()->has('message'))
+        <x-alertRevisor :message="session('message')"></x-alertRevisor>
+         @endif 
 
 </x-layout>

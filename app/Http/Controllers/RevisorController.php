@@ -38,7 +38,7 @@ class RevisorController extends Controller
     {
         Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
 
-        return redirect()->route('welcome')->with('message', 'La richiesta per diventare revisore è stata accettata');
+        return redirect()->back()->with('message', 'La richiesta per diventare revisore è stata accettata');
     }
 
     public function searchArticles(Request $request)

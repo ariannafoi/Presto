@@ -29,6 +29,7 @@ class ArticleForm extends Component
     public $article;
 
 
+
     protected $rules = [
         'title' => 'required|min:6',
         'body' =>'required|min:15',
@@ -69,6 +70,16 @@ class ArticleForm extends Component
         }
     }
 
+    public function cleanForm(){
+         $this->temporary_images;
+         $this->images = [];
+         $this->image;
+         $this->title;
+         $this->body;
+         $this->price;
+         $this->category;
+         $this->article;
+    }
     public function save(){
 
             $this->validate();
@@ -100,9 +111,10 @@ class ArticleForm extends Component
 
                     File::deleteDirectory(storage_path('/app/livewire-tmp'));
                 }
+                $this->cleanForm();
+                return redirect()->route('create')->with('message', 'Articolo inserito correttamente, sarà pubblicato dopo la revisione');
 
-                return redirect()->route('welcome')->with('message', 'Articolo inserito correttamente, sarà pubblicato dopo la revisione');
-                $this->reset();
+         
     }
         
 

@@ -37,8 +37,12 @@
             </div>
 
             <div class="py-5 text-center bold"><p>&copy;2023 I Prodigy Six | All Rights Reserved</p></div>
+                    
+        @if (session()->has('message'))
+            <x-alertSuccessRevisor :message="session('message')"></x-alertSuccessRevisor>
+         @endif 
     
         @livewireScripts
-        <script src="https://kit.fontawesome.com/9240e71097.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/9240e71097.js" crossorigin="anonymous"></script>    
     </body>
     </html>

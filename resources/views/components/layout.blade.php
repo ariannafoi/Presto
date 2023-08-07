@@ -22,12 +22,6 @@
             <div class="col-12 space-custom">
                 <div class="min-vh-100">
 
-                    @if (session()->has('message'))
-                        <div class="alert alert-success message-space">
-                            {{ session('message') }}
-                        </div>
-                    @endif
-
                     @if (session()->has('access-denied'))
                         <div class="alert alert-danger message-space">
                             {{ session('access-denied') }}

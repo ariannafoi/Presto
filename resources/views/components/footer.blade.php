@@ -42,6 +42,10 @@
     </div>
     <p class="f-color text-center">&copy;2023 I Prodigy Six | All Rights Reserved</p>
   </footer>
+  @if (session()->has('message'))
+    <x-alertRevisorRequest :message="session('message')"></x-alertRevisorRequest>
+  @endif 
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </div>

@@ -37,8 +37,12 @@
                 @endforeach
               </div>
             </div>
-              @else
-              
+              {{-- @else
+              <div class = "img-display">
+                <div class = "img-showcase">
+                    <img src="/img/imgDefault.png" class="" alt="...">
+                </div>
+              </div> --}}
             @endif
             <!-- card right -->
             <div class = "product-content">

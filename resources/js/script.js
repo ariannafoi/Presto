@@ -10,28 +10,25 @@ imgBtns.forEach((imgItem) => {
     });
 });
 
-function slideImage(){
-    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
 
-    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
-}
 
-window.addEventListener('resize', slideImage);
 
 
 const wrapper = document.querySelector(".wrapper__category");
 const carousel = document.querySelector(".carousel__category");
-const firstCardWidth = carousel.querySelector(".card__category__cst").offsetWidth;
-const arrowBtns = document.querySelectorAll(".wrapper__category i");
-const carouselChildrens = [...carousel.children];
+if(carousel){
+    function slideImage(){
+        const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+    
+        document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+    }
 
-let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+    window.addEventListener('resize', slideImage);
 
-// Get the number of cards that can fit in the carousel at once
-let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
-
-// Insert copies of the last few cards to beginning of carousel for infinite scrolling
-carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    const firstCardWidth = carousel.querySelector(".card__category__cst").offsetWidth
+    const carouselChildrens = [...carousel.children]
+    // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
     carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
 });
 
@@ -39,6 +36,8 @@ carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
 carouselChildrens.slice(0, cardPerView).forEach(card => {
     carousel.insertAdjacentHTML("beforeend", card.outerHTML);
 });
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
 
 // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
 carousel.classList.add("no-transition");
@@ -103,5 +102,12 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+};
+const arrowBtns = document.querySelectorAll(".wrapper__category i");
 
-AOS.init();
+
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+
+// Get the number of cards that can fit in the carousel at once
+
+

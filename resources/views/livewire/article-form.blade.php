@@ -38,8 +38,6 @@
                           </label>
                         </div>
                     </div>
-
-
                       @if (!empty($images))
                       <div class="row">
                         <div class="col-12 text-center">
@@ -59,6 +57,8 @@
                     <button type="submit" class="btn crea-custom">{{__('ui.createAnnouncementBtn')}}</button>
                   </div>
                 </form>
-                
-               
+                @if (session()->has('message'))
+                <x-alertSuccess :message="session('message')"></x-alertSuccess>
+                 @endif 
+                              
 </div>

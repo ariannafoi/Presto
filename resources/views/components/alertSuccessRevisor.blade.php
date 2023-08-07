@@ -9,7 +9,7 @@
          {{$message}}
         </div>
         <div class="modal-footer justify-content-center">
-          <a href="{{route('welcome')}}"><button type="button" class="crea-custom btn">Ritorna alla home</button></a>
+          <a href="{{route('welcome')}}"><button type="button" class="crea-custom btn">Chiudi</button></a>
         </div>
       </div>
     </div>
@@ -23,4 +23,3 @@
     })
     const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)
   </script>
-
