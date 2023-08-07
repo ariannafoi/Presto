@@ -873,12 +873,6 @@ color: black;
 }
 
 /* REVISOR PAGE */
-@media screen and (max-width: 1023px){
-
-  .filtro-categoria-custom{
-    display: none;
-  }
-}
 
 *{
   box-sizing: border-box;

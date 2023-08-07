@@ -16,17 +16,6 @@
                                 <button type="submit" class="btn-custom-bar"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #005555;"></i></button>
                             </form>
                         </div>
-                        <div class="filtro-categoria-custom">
-                            <p class="my-3 text-center py-2">Filtra per categoria</p>
-                            @foreach ($categories as $category)
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        {{$category->name}}
-                                    </label>
-                                </div>
-                            @endforeach
-                        </div>
                     </div>
                 <div class="col-12 col-sm-12 col-xl-9">
                     <div class="row">
