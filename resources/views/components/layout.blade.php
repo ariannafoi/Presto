@@ -17,11 +17,10 @@
 <body>
     <x-navbar></x-navbar>
 
-    <div class="container">
+    <div class="container" id="test2">
         <div class="row ">
             <div class="col-12 space-custom">
                 <div class="min-vh-100">
-
                     @if (session()->has('access-denied'))
                         <div class="alert alert-danger message-space">
                             {{ session('access-denied') }}
@@ -32,7 +31,7 @@
             </div>
         </div>
     </div>
-
+    {{'flag'}}
     <x-footer></x-footer>
     @livewireScripts
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

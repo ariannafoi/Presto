@@ -36,14 +36,40 @@
                   @endphp
                 @endforeach
               </div>
+              @else
+                        <div class="img-display py-4">
+                            <div class="img-showcase">
+                                <img src="/img/imgDefault.png" class="" alt="...">
+                                <img src="/img/imgDefault.png">
+                                <img src="/img/imgDefault.png">
+                                <img src="/img/imgDefault.png">
+                            </div>
+                        </div>
+                        <div class="img-select">
+                            <div class="img-item">
+                                <a href="#" data-id="1">
+                                    <img src="/img/imgDefault.png" alt="shoe image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="2">
+                                    <img src="/img/imgDefault.png" alt="shoe image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="3">
+                                    <img src="/img/imgDefault.png" alt="shoe image">
+                                </a>
+                            </div>
+                            <div class="img-item">
+                                <a href="#" data-id="4">
+                                    <img src="/img/imgDefault.png" alt="shoe image">
+                                </a>
+                            </div>
+                        </div>
+                    @endif
             </div>
-              {{-- @else
-              <div class = "img-display">
-                <div class = "img-showcase">
-                    <img src="/img/imgDefault.png" class="" alt="...">
-                </div>
-              </div> --}}
-            @endif
+
             <!-- card right -->
             <div class = "product-content">
               <h2 class = "product-title">{{__('ui.title')}}: {{$article->title}}</h2>

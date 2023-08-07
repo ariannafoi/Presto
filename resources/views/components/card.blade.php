@@ -1,5 +1,5 @@
 <div class="card-custom">
-    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : '/img/logopresto.png'}}" class="card-img-custom" alt="Immagine descrittiva">
+    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(400,300) : '/img/imgDefault.png'}}" class="card-img-custom" alt="Immagine descrittiva">
     <div class="card-details">
       <h5 class="text-title">{{$article->getTitleSubstring()}}</h5>
       <p class="text-body">
