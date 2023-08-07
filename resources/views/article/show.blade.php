@@ -61,13 +61,6 @@
                 <p >{{__('ui.publish')}} {{$article->created_at->format('d/m/Y')}} {{__('ui.from')}} {{$article->user->name ?? ''}}</p>
               </div>
 
-              <div class="purchase-info d-flex">
-                <input type="number" min="0" value="1">
-                <button type="button" class="btn">
-                  {{__('ui.cart')}}<i class="fas fa-shopping-cart ps-2"></i>
-                </button>
-              </div>
-
               <div>
                 @if(Auth::user()->name == $article->user->name)
                   <form action="" method="POST">
