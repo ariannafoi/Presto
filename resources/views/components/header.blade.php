@@ -8,7 +8,7 @@
       <div class="container-sb">
         <form class="sb" method="GET" action="{{route('article.search')}}">
           <i class="fa-solid fa-magnifying-glass fa-search" style="color: #000000;"></i>
-          <input type="text" placeholder="{{__('ui.searchHere')}}" class="input-sb" name="searched">
+          <input type="search" placeholder="{{__('ui.searchHere')}}" class="input-sb" name="searched">
           <button type="submit" class="btn-sb">Search</button>
         </form>
       </div>
