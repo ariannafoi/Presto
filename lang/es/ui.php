@@ -15,6 +15,7 @@ return [
     'writeUsername' => 'Introduzca su username',
     'writePasswordAgain' => 'Vuelva a introducir su password',
 
+    'hello' => 'Hola',
     'access' => 'Acceso',
     'register' => 'Iniciar sesión',
     'categories' => 'Categorías',

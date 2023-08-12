@@ -16,6 +16,7 @@ return [
 
     // NAVBAR
 
+    'hello' => 'Ciao',
     'search' => 'Cerca',
     'access' => 'Accedi',
     'register' => 'Registrati',

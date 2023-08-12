@@ -15,6 +15,7 @@ return [
     'writeUsername' => 'Insert username',
     'writePasswordAgain' => 'Insert your password again',
 
+    'hello' => 'Hello',
     'access' => 'Login',
     'register' => 'Register',
     'revisorZone' => 'Revisor zone',
