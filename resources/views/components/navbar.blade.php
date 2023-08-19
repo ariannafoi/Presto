@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse font-scritte dropdown__menu" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
           <li class="nav-item">
-            <a class="nav-link n-custom" href="{{route('welcome')}}">Home</a>
+            <a class="nav-link n-custom" href="{{route('welcome')}}">Homee</a>
           </li>
           @auth
           <li class="nav-item dropdown">
