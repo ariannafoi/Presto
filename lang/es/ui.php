@@ -5,7 +5,7 @@ return [
     // HOME
     'latestArticles' => "Los últimos anuncios publicados",
     'subtitleHeader' => "La rápida respuesta a tus necesidades",
-    'allCategories' => 'Todas las categoriass', 
+    'allCategories' => 'Todas las categorias', 
     'search' => 'Buscar',
 
     // Placeholders
