@@ -1,13 +1,12 @@
 <nav class="navbar navbar-expand-lg nav-custom">
     <div class="container-fluid p-0">
-      <img src="/img/fotoLogo.png" alt="" class="navbar-logo">
+      <a class="nav-link n-custom" href="{{route('welcome')}}"><img src="/img/fotoLogo.png" alt="" class="navbar-logo"></a>
       <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars i-custom"></i>
       </button>
       <div class="collapse navbar-collapse font-scritte dropdown__menu" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
           <li class="nav-item">
-            <a class="nav-link n-custom" href="{{route('welcome')}}">Home</a>
           </li>
           @auth
           <li class="nav-item dropdown">
